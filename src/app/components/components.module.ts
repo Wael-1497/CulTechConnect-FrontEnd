@@ -15,6 +15,7 @@ import { NotificationComponent } from './notification/notification.component';
 import { NgbdModalComponent } from './modal/modal.component';
 import { NgbdModalContent } from './modal/modal.component';
 import {TestCompComponent} from "./test-comp/test-comp.component";
+import { ShowPartClientComponent } from './show-part-client/show-part-client.component';
 
 @NgModule({
     imports: [
@@ -34,7 +35,8 @@ import {TestCompComponent} from "./test-comp/test-comp.component";
         NotificationComponent,
         TestCompComponent,
         NgbdModalComponent,
-        NgbdModalContent
+        NgbdModalContent,
+        ShowPartClientComponent
     ],
     entryComponents: [NgbdModalContent],
     exports:[ ComponentsComponent ]
