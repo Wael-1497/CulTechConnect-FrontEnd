@@ -1,0 +1,21 @@
+.custom-image {
+  width: 700px; /* Largeur personnalisée */
+  height: 350px; /* Hauteur personnalisée */
+  margin: 0 auto; /* Centre l'image horizontalement */
+}
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Ajustez la hauteur selon vos besoins */
+  margin: 0 auto;
+}
+.centered-div {
+  text-align: center;
+}
+.custom-container {
+  margin-top: 50px; /* Ajoute une marge en haut pour déplacer vers le bas */
+  margin-left: 300px; /* Ajoute une marge à gauche pour déplacer vers la droite */
+  /* Vous pouvez ajuster ces valeurs selon vos besoins */
+}
+

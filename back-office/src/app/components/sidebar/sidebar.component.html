@@ -28,8 +28,10 @@
                 </p>
             </a>
         </li>
-        <li class="nav-item dropdown">
-            <a class="nav-link" href="javascript:void(0)" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        // add css class "active" to nav-item to highlight
+
+        <li class="nav-item dropdown" [ngClass]="{'active': isDropdownActive}">
+            <a class="nav-link" href="javascript:void(0)" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" (click)="toggleDropdown()">
                 <i class="material-icons">notifications</i>
                 <span class="notification">5</span>
                 <p>
@@ -56,9 +58,10 @@
   </div>
     <ul class="nav">
         <li routerLinkActive="active" *ngFor="let menuItem of menuItems" class="{{menuItem.class}} nav-item">
-            <a class="nav-link" [routerLink]="[menuItem.path]">
+            <a class="nav-link"  [routerLink]="[menuItem.path]">
                 <i class="material-icons">{{menuItem.icon}}</i>
                 <p>{{menuItem.title}}</p>
+
             </a>
         </li>
     </ul>

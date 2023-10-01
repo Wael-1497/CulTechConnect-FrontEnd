@@ -7,6 +7,8 @@ import { AppRoutingModule } from './app.routing';
 import { ComponentsModule } from './components/components.module';
 import { AppComponent } from './app.component';
 import { AdminLayoutComponent } from './layouts/admin-layout/admin-layout.component';
+import { ShowPartComponent } from './show-part/show-part.component';
+import { ShowOnePartComponent } from './show-one-part/show-one-part.component';
 
 @NgModule({
   imports: [
@@ -21,6 +23,8 @@ import { AdminLayoutComponent } from './layouts/admin-layout/admin-layout.compon
   declarations: [
     AppComponent,
     AdminLayoutComponent,
+    ShowPartComponent,
+    ShowOnePartComponent,
 
   ],
   providers: [],

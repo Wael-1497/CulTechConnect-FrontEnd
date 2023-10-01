@@ -1,0 +1,12 @@
+.nav-link.active {
+    background-color: blue; /* La couleur que vous souhaitez */
+    color: white; /* Couleur du texte dans le bouton */
+}
+ul.nav li.active a.nav-link {
+    background-color: #19bdd2; /* Couleur du texte en bleu */
+    /* Ajoutez d'autres styles CSS selon vos besoins */
+    box-shadow: 0 0 5px #19bdd2; /* Ombre bleue */
+    /*box-shadow: 0 4px 4px -2px #19bdd2; !* Ombre bleue *!*/
+    -moz-box-shadow: #00a5bb 0 0 5px; /* Ombre bleue pour Firefox */
+
+}
