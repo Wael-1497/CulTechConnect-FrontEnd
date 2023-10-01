@@ -12,13 +12,15 @@ import { FooterComponent } from './shared/footer/footer.component';
 import { ComponentsModule } from './components/components.module';
 import { ExamplesModule } from './examples/examples.module';
 import { TestCompComponent } from './components/test-comp/test-comp.component';
+import { EventComponent } from './components/event/event.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     NavbarComponent,
-    FooterComponent
+    FooterComponent,
+    EventComponent
   ],
   imports: [
     BrowserModule,
