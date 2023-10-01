@@ -10,6 +10,7 @@ import { NotificationsComponent } from '../../notifications/notifications.compon
 import { UpgradeComponent } from '../../upgrade/upgrade.component';
 import {ShowPartComponent} from "../../show-part/show-part.component";
 import {ShowOnePartComponent} from "../../show-one-part/show-one-part.component";
+import {UpdatePartComponent} from "../../update-part/update-part.component";
 
 export const AdminLayoutRoutes: Routes = [
     // {
@@ -64,5 +65,6 @@ export const AdminLayoutRoutes: Routes = [
     { path: 'upgrade',        component: UpgradeComponent },
     { path: 'test',        component: ShowPartComponent },
     { path: 'part',        component: ShowOnePartComponent },
+    { path: 'up-part',        component: UpdatePartComponent },
 
 ];

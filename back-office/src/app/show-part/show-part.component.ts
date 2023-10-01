@@ -15,5 +15,8 @@ export class ShowPartComponent implements OnInit {
   redirectToPartInfo() {
     this.router.navigate(['/part']); // Remplacez 'autre-page' par le chemin configuré dans vos routes
   }
+  redirectToUpPart() {
+    this.router.navigate(['/up-part']); // Remplacez 'autre-page' par le chemin configuré dans vos routes
+  }
 
 }
