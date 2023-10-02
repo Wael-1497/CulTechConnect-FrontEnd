@@ -10,6 +10,7 @@ import { LandingComponent } from './examples/landing/landing.component';
 import { NucleoiconsComponent } from './components/nucleoicons/nucleoicons.component';
 import {TestCompComponent} from "./components/test-comp/test-comp.component";
 import {EventComponent} from "./components/event/event.component";
+import {EventmanagementComponent} from "./eventmanagement/eventmanagement.component";
 
 const routes: Routes =[
     { path: '', redirectTo: 'home', pathMatch: 'full' },
@@ -19,7 +20,9 @@ const routes: Routes =[
     { path: 'landing',          component: LandingComponent },
     { path: 'nucleoicons',      component: NucleoiconsComponent },
     { path: 'test', component: TestCompComponent },
-    { path: 'event',      component: EventComponent }
+    { path: 'event',      component: EventComponent },
+    { path: 'eventmanagement',      component: EventmanagementComponent }
+
 
 ];
 

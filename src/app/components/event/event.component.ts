@@ -16,6 +16,5 @@ export class EventComponent {
     } else if (eventNumber === 2) {
       this.showEventDetails2 = !this.showEventDetails2;
     }
-    // Add more conditions for additional events
   }
 }

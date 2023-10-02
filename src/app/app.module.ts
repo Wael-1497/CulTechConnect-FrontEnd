@@ -13,6 +13,8 @@ import { ComponentsModule } from './components/components.module';
 import { ExamplesModule } from './examples/examples.module';
 import { TestCompComponent } from './components/test-comp/test-comp.component';
 import { EventComponent } from './components/event/event.component';
+import { EventmanagementComponent } from './eventmanagement/eventmanagement.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -20,7 +22,8 @@ import { EventComponent } from './components/event/event.component';
     AppComponent,
     NavbarComponent,
     FooterComponent,
-    EventComponent
+    EventComponent,
+    EventmanagementComponent
   ],
   imports: [
     BrowserModule,
@@ -28,6 +31,7 @@ import { EventComponent } from './components/event/event.component';
     FormsModule,
     RouterModule,
     ComponentsModule,
+    ReactiveFormsModule,
     ExamplesModule,
     AppRoutingModule,
   ],
