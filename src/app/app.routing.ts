@@ -10,12 +10,14 @@ import { LandingComponent } from './examples/landing/landing.component';
 import { NucleoiconsComponent } from './components/nucleoicons/nucleoicons.component';
 import {TestCompComponent} from "./components/test-comp/test-comp.component";
 import {ShowPartClientComponent} from "./components/show-part-client/show-part-client.component";
+import {SigninComponent} from "./examples/signin/signin.component";
 
 const routes: Routes =[
     { path: '', redirectTo: 'home', pathMatch: 'full' },
     { path: 'home',             component: ComponentsComponent },
     { path: 'user-profile',     component: ProfileComponent },
     { path: 'signup',           component: SignupComponent },
+    { path: 'signin',           component: SigninComponent },
     { path: 'landing',          component: LandingComponent },
     { path: 'nucleoicons',      component: NucleoiconsComponent },
     { path: 'test', component: TestCompComponent },

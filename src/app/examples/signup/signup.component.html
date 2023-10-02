@@ -1,54 +1,100 @@
 <div class="wrapper">
     <div class="page-header" style="background-image: url('./assets/img/login-image.jpg');">
         <div class="filter"></div>
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-4 col-sm-6 mr-auto ml-auto">
-                      <div class="card card-register">
-                          <h3 class="title">Welcome</h3>
-                          <div class="social-line text-center">
-                              <a href="#pablo" class="btn btn-neutral btn-facebook btn-just-icon">
-                                  <i class="fa fa-facebook-square"></i>
-                              </a>
-                              <a href="#pablo" class="btn btn-neutral btn-google btn-just-icon">
-                                  <i class="fa fa-google-plus"></i>
-                              </a>
-                              <a href="#pablo" class="btn btn-neutral btn-twitter btn-just-icon">
-                                  <i class="fa fa-twitter"></i>
-                              </a>
-                          </div>
-                          <form class="register-form">
-                              <label>Email</label>
-                              <div class="input-group form-group-no-border" [ngClass]="{'input-group-focus':focus===true}">
-                                <div class="input-group-prepend">
-                                  <span class="input-group-text">
-                                      <i class="nc-icon nc-email-85"></i>
-                                  </span>
+        <div class="container">
+            <div class="row">
+                <div class="mr-auto  ml-auto">
+                    <div class="card card-register custom-blue-card">
+                        <h3 class="title" style="color: white;">Welcome</h3>
+                        <br>
+                        <div class="social-line text-center">
+                            <a href="#pablo" class="btn btn-neutral btn-facebook btn-just-icon">
+                                <i class="fa fa-facebook-square"></i>
+                            </a>
+                            <a href="#pablo" class="btn btn-neutral btn-google btn-just-icon">
+                                <i class="fa fa-google-plus"></i>
+                            </a>
+                            <a href="#pablo" class="btn btn-neutral btn-twitter btn-just-icon">
+                                <i class="fa fa-twitter"></i>
+                            </a>
+                        </div>
+                        <form class="register-form">
+                            <div class="row">
+                                <div class="col">
+                                    <label>First Name</label>
+                                    <div class="input-group form-group-no-border" [ngClass]="{'input-group-focus':focus===true}">
+                                        <div class="input-group-prepend">
+                      <span class="input-group-text">
+                        <i class="nc-icon nc-single-02"></i>
+                      </span>
+                                        </div>
+                                        <input type="text" class="form-control" placeholder="First Name" (focus)="focus=true" (blur)="focus=false">
+                                    </div>
                                 </div>
-
-                                  <input type="text" class="form-control" placeholder="Email" (focus)="focus=true" (blur)="focus=false" >
-                              </div>
-
-                              <label>Password</label>
-                              <div class="input-group form-group-no-border" [ngClass]="{'input-group-focus':focus1===true}">
-                                <div class="input-group-prepend">
-                                  <span class="input-group-text">
-                                      <i class="nc-icon nc-key-25"></i>
-                                  </span>
+                                <div class="col">
+                                    <label>Last Name</label>
+                                    <div class="input-group form-group-no-border" [ngClass]="{'input-group-focus':focus===true}">
+                                        <div class="input-group-prepend">
+                      <span class="input-group-text">
+                        <i class="nc-icon nc-single-02"></i>
+                      </span>
+                                        </div>
+                                        <input type="text" class="form-control" placeholder="Last Name" (focus)="focus=true" (blur)="focus=false">
+                                    </div>
                                 </div>
-                                  <input type="text" class="form-control" placeholder="Password" (focus)="focus1=true" (blur)="focus1=false" >
-                              </div>
-                              <button class="btn btn-danger btn-block btn-round">Register</button>
-                          </form>
-                          <div class="forgot">
-                              <a href="#" class="btn btn-link btn-danger">Forgot password?</a>
-                          </div>
-                      </div>
+                            </div>
+
+                            <label>Email</label>
+                            <div class="input-group form-group-no-border" [ngClass]="{'input-group-focus':focus===true}">
+                                <div class="input-group-prepend">
+                  <span class="input-group-text">
+                    <i class="nc-icon nc-email-85"></i>
+                  </span>
+                                </div>
+                                <input type="text" class="form-control" placeholder="Email" (focus)="focus=true" (blur)="focus=false">
+                            </div>
+
+                            <div class="row">
+                                <div class="col">
+                                    <label>Password</label>
+                                    <div class="input-group form-group-no-border" [ngClass]="{'input-group-focus':focus1===true}">
+                                        <div class="input-group-prepend">
+                      <span class="input-group-text">
+                        <i class="nc-icon nc-key-25"></i>
+                      </span>
+                                        </div>
+                                        <input type="password" class="form-control" placeholder="Password" (focus)="focus1=true" (blur)="focus1=false">
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <label>Confirm Password</label>
+                                    <div class="input-group form-group-no-border" [ngClass]="{'input-group-focus':focus2===true}">
+                                        <div class="input-group-prepend">
+                      <span class="input-group-text">
+                        <i class="nc-icon nc-key-25"></i>
+                      </span>
+                                        </div>
+                                        <input type="password" class="form-control" placeholder="Confirm Password" (focus)="focus2=true" (blur)="focus2=false">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <label>Type of Account</label>
+                            <select class="form-control">
+                                <option value="option2">Simple User</option>
+                                <option value="option1">Company</option>
+                            </select>
+
+                            <div class="centered-container">
+                            <button class="btn btn-danger btn-block btn-round">Register</button>
+                            </div>
+                        </form>
                     </div>
                 </div>
-                <div class="footer register-footer text-center">
-                    <h6>&copy;{{test | date: 'yyyy'}}, made with <i class="fa fa-heart heart"></i> by Creative Tim</h6>
-                </div>
             </div>
+            <div class="footer register-footer text-center">
+                <h6>&copy;{{test | date: 'yyyy'}}, made with <i class="fa fa-heart heart"></i> by Creative Tim</h6>
+            </div>
+        </div>
     </div>
 </div>
