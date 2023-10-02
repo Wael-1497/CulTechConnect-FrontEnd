@@ -54,7 +54,10 @@ export const AdminLayoutRoutes: Routes = [
     //         path: 'upgrade',
     //         component: UpgradeComponent
     //     }]
+    // 
+    // Blog 
     // }
+
     { path: 'dashboard',      component: DashboardComponent },
     { path: 'user-profile',   component: UserProfileComponent },
     { path: 'table-list',     component: TableListComponent },
@@ -66,5 +69,6 @@ export const AdminLayoutRoutes: Routes = [
     { path: 'test',        component: ShowPartComponent },
     { path: 'part',        component: ShowOnePartComponent },
     { path: 'up-part',        component: UpdatePartComponent },
+
 
 ];
