@@ -1,0 +1,69 @@
+<style>
+    /* Styles pour l'animation */
+    tbody tr:hover {
+      background-color: #c0c8f3; /* Couleur de fond lors du survol */
+      transition: background-color 0.3s ease-in-out; /* Animation de transition */
+    }
+  </style>
+
+<div class="wrapper">
+    <div class="page-header section-dark page-header-xs" style="background-image: url('./assets/img/blog-background.jpg'); background-size: cover; height: 10vh;">
+        <div class="filter"></div>
+        <div class="content-center">
+            <div class="container">
+                <div class="title-brand">
+                    <h1 class="presentation-title" style="font-size: 55px;">Mon Blog</h1>
+                    <div class="fog-low">
+                        <img src="./assets/img/fog-low.png" alt="">
+                    </div>
+                    <div class="fog-low right">
+                        <img src="./assets/img/fog-low.png" alt="">
+                    </div>
+                </div>
+                <h2 class="presentation-subtitle text-center">Découvrez nos articles</h2>
+            </div>
+        </div>
+        <div class="moving-clouds" style="background-image: url('./assets/img/clouds.png'); "></div>
+        <h6 class=" category-absolute ml-auto mr-auto">Conçu et codé par Vous</h6>
+    </div>
+
+    <div class="main">
+        <div class="container">
+            <!-- Liste des articles de blog -->
+            <div class="row">
+                <div class="col-md-10 offset-md-1">
+                    <div class="table-responsive">
+                        <table class="table table-bordered">
+                            <thead>
+                                <tr>
+                                    <th>Numéro</th>
+                                    <th>Image</th>
+                                    <th>Titre</th>
+                                    <th>Date de publication</th>
+                                    <th>Action</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>1</td>
+                                    <td><img src="./assets/img/1.jpg" alt="Image de l'article 1" class="img-thumbnail"></td>
+                                    <td>Titre de l'article 1</td>
+                                    <td>1er janvier 2023</td>
+                                    <td><a href="#" class="btn btn-primary">Lire la suite</a></td>
+                                </tr>
+                                <tr>
+                                    <td>2</td>
+                                    <td><img src="./assets/img/2.jpg" alt="Image de l'article 2" class="img-thumbnail"></td>
+                                    <td>Titre de l'article 2</td>
+                                    <td>15 février 2023</td>
+                                    <td><a href="#" class="btn btn-primary">Lire la suite</a></td>
+                                </tr>
+                                <!-- Ajoutez autant de lignes que nécessaire ici -->
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

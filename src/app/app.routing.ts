@@ -3,6 +3,7 @@ import { CommonModule, } from '@angular/common';
 import { BrowserModule  } from '@angular/platform-browser';
 import { Routes, RouterModule } from '@angular/router';
 
+import { BlogComponent } from './blog/blog.component';
 import { ComponentsComponent } from './components/components.component';
 import { ProfileComponent } from './examples/profile/profile.component';
 import { SignupComponent } from './examples/signup/signup.component';
@@ -22,6 +23,7 @@ const routes: Routes =[
     { path: 'nucleoicons',      component: NucleoiconsComponent },
     { path: 'test', component: TestCompComponent },
     { path: 'part-client', component: ShowPartClientComponent },
+    { path: 'blog', component: BlogComponent },
 ];
 
 @NgModule({

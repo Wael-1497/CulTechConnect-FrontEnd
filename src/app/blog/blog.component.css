@@ -1,0 +1,23 @@
+/* Personnalisation des couleurs */
+.card {
+    background-color: #f5f8fa; /* Couleur de fond des cartes */
+}
+
+.card-title {
+    color: #007bff; /* Couleur du titre de l'article */
+}
+
+.card-text {
+    color: #333; /* Couleur du texte de l'article */
+}
+
+.btn-primary {
+    background-color: #007bff; /* Couleur du bouton "Lire la suite" */
+    border-color: #007bff;
+    color: #fff; /* Couleur du texte du bouton "Lire la suite" */
+}
+
+.btn-primary:hover {
+    background-color: #0056b3; /* Couleur au survol du bouton "Lire la suite" */
+    border-color: #0056b3;
+}
