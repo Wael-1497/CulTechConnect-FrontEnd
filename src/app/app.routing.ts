@@ -12,6 +12,9 @@ import {TestCompComponent} from "./components/test-comp/test-comp.component";
 import {ShowPartClientComponent} from "./components/show-part-client/show-part-client.component";
 import {SigninComponent} from "./examples/signin/signin.component";
 import {ChatComponent} from "./components/chat/chat.component";
+import {BlogComponent} from "./components/blog/blog.component";
+import {EventComponent} from "./components/event/event.component";
+import {EventmanagementComponent} from "./components/eventmanagement/eventmanagement.component";
 
 const routes: Routes =[
     { path: '', redirectTo: 'home', pathMatch: 'full' },
@@ -24,6 +27,10 @@ const routes: Routes =[
     { path: 'test', component: TestCompComponent },
     { path: 'part-client', component: ShowPartClientComponent },
     { path: 'chat', component: ChatComponent },
+    { path: 'blog', component: BlogComponent },
+    { path: 'event', component: EventComponent },
+    { path: 'eventmanagement', component: EventmanagementComponent }
+
 ];
 
 @NgModule({

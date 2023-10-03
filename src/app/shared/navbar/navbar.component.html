@@ -37,6 +37,24 @@
                 <li class="nav-item" *ngIf="!isDocumentation()">
                     <a [routerLink]="['/part-client']" class="nav-link"><i class="nc-icon nc-book-bookmark"></i>Your partnerships</a>
                 </li>
+                <li class="nav-item" *ngIf="!isDocumentation()">
+                    <a [routerLink]="['/event']" class="nav-link"><i class="nc-icon nc-book-bookmark"></i>Event</a>
+                </li>
+<!--                <li class="nav-item" *ngIf="!isDocumentation()">-->
+<!--                    <a [routerLink]="['/eventmanagement']" class="nav-link"><i class="nc-icon nc-book-bookmark"></i>Event Management</a>-->
+<!--                </li>-->
+                <li class="nav-item" *ngIf="!isDocumentation()">
+                    <a [routerLink]="['/chat']" class="nav-link"><i class="nc-icon nc-book-bookmark"></i>chat</a>
+                </li>
+                <li class="nav-item" *ngIf="!isDocumentation()">
+                    <a [routerLink]="['/blog']" class="nav-link"><i class="nc-icon nc-book-bookmark"></i>blog</a>
+                </li>
+                <li class="nav-item" *ngIf="!isDocumentation()">
+                    <a [routerLink]="['/signin']" class="nav-link"><i class="nc-icon nc-book-bookmark"></i>Sign-In</a>
+                </li>
+                <li class="nav-item" *ngIf="!isDocumentation()">
+                    <a [routerLink]="['/signup']" class="nav-link"><i class="nc-icon nc-book-bookmark"></i>Sign-Up</a>
+                </li>
                 <li ngbDropdown class="nav-item">
                     <a class="nav-link" id="dropdownBasic1" ngbDropdownToggle><i class="nc-icon nc-book-bookmark"></i>Dropdown Test</a>
                     <div ngbDropdownMenu aria-labelledby="dropdownBasic1" class="dropdown-primary">

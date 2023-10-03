@@ -1,0 +1,169 @@
+<div class="wrapper">
+    <div class="page-header-xs" style="background-image: url('./assets/img/login-image.jpg'); background-size: 100% 100%; height: 80px;">
+        <div class="filter"></div>
+    </div>
+</div>
+<div class="page-header section-dark page-header-xs" style="background-image: url('./assets/img/blog-background.jpg'); background-size: cover; height: 10vh;">
+    <div class="filter"></div>
+    <div class="content-center">
+        <div class="container">
+            <div class="title-brand">
+                <h1 class="presentation-title" style="font-size: 55px;">Events</h1>
+                <div class="fog-low">
+                    <img src="./assets/img/fog-low.png" alt="">
+                </div>
+                <div class="fog-low right">
+                    <img src="./assets/img/fog-low.png" alt="">
+                </div>
+            </div>
+            <h2 class="presentation-subtitle text-center">Découvrez nos évenement</h2>
+        </div>
+    </div>
+    <div class="moving-clouds" style="background-image: url('./assets/img/clouds.png'); "></div>
+    <h6 class=" category-absolute ml-auto mr-auto">Conçu et codé par Vous</h6>
+</div>
+
+<div class="container">
+    <div class="row">
+        <div class="col-lg-4 col-sm-6">
+            <div class="card card-register">
+                <h3 class="title">Events</h3>
+                <form class="event-form">
+                    <!-- Event Card 1 -->
+                    <div class="event-card">
+                        <h4>Event Title 1</h4>
+                        <p>Event Description 1</p>
+                        <button class="btn btn-success" (click)="toggleEventDetails(1)">Details</button>
+                        <div class="event-details" *ngIf="showEventDetails1">
+                            <p>Date: Event Date 1</p>
+                            <p>Location: Event Location 1</p>
+                            <p>Description: Event Description 1</p>
+                        </div>
+                        <button class="btn btn-primary">Participate</button>
+                        <!--Checkout Button -->
+                        <div class="container d-flex justify-content-center align-items-center">
+                            <button type="button" class="btn btn-outline-info btn-round" (click)="open(content)">Checkout</button>
+                        </div>
+
+                        <ng-template #content let-modal>
+                            <div class="modal-header">
+                                <h4 class="modal-title" id="modal-basic-title">Checkout</h4>
+                                <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                <form>
+                                    <div class="form-group">
+                                        <label for="firstname">Event</label>
+                                        <div class="input-group">
+                                            <input id="firstname" value="GALITE CAMP 2.0" class="form-control" disabled />
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="selectOption">Type de partenariat</label>
+                                        <div class="input-group">
+                                            <select id="selectOption" class="form-control">
+                                                <option value="option1">Partenariat Commercial</option>
+                                                <option value="option2">Option 2</option>
+                                                <option value="option3">Option 3</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="regularInput">Description</label>
+                                        <div class="input-group">
+                                            <input id="regularInput" class="form-control" />
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="regularInput">Budget</label>
+                                        <div class="input-group">
+                                            <input id="budget" class="form-control" />
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                            <div class="modal-footer d-flex justify-content-center">
+                                <button type="button" class="btn btn-outline-info btn-round " (click)="modal.close('Save click')">Continue</button>
+                            </div>
+                        </ng-template>
+
+                    </div>
+
+                </form>
+            </div>
+        </div>
+        <div class="col-lg-4 col-sm-6">
+            <div class="card card-register">
+                <h3 class="title">Events</h3>
+                <form class="event-form">
+                    <!-- Event Card 2 -->
+                    <div class="event-card">
+                        <h4>Event Title 2</h4>
+                        <p>Event Description 2</p>
+                        <button class="btn btn-success" (click)="toggleEventDetails(2)">Details</button>
+                        <div class="event-details" *ngIf="showEventDetails2">
+                            <p>Date: Event Date 2</p>
+                            <p>Location: Event Location 2</p>
+                            <p>Description: Event Description 2</p>
+                        </div>
+                        <button class="btn btn-primary">Participate</button>
+                        <!--Checkout Button -->
+                        <div class="container d-flex justify-content-center align-items-center">
+                            <button type="button" class="btn btn-outline-info btn-round" (click)="open(content)">Checkout</button>
+                        </div>
+
+                        <ng-template #content let-modal>
+                            <div class="modal-header">
+                                <h4 class="modal-title" id="modal-basic-title">Checkout</h4>
+                                <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                <form>
+                                    <div class="form-group">
+                                        <label for="firstname">Event</label>
+                                        <div class="input-group">
+                                            <input id="firstname" value="GALITE CAMP 2.0" class="form-control" disabled />
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="selectOption">Type de partenariat</label>
+                                        <div class="input-group">
+                                            <select id="selectOption" class="form-control">
+                                                <option value="option1">Partenariat Commercial</option>
+                                                <option value="option2">Option 2</option>
+                                                <option value="option3">Option 3</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="regularInput">Description</label>
+                                        <div class="input-group">
+                                            <input id="regularInput" class="form-control" />
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="regularInput">Budget</label>
+                                        <div class="input-group">
+                                            <input id="budget" class="form-control" />
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                            <div class="modal-footer d-flex justify-content-center">
+                                <button type="button" class="btn btn-outline-info btn-round " (click)="modal.close('Save click')">Continue</button>
+                            </div>
+                        </ng-template>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <!-- Add more event cards here -->
+    </div>
+    <div class="footer register-footer text-center">
+        <h6>&copy;{{ currentYear }}, made with <i class="fa fa-heart heart"></i> by Creative Tim</h6>
+    </div>
+</div>

@@ -1,0 +1,59 @@
+<div class="wrapper">
+    <div class="page-header-xs" style="background-image: url('./assets/img/login-image.jpg'); background-size: 100% 100%; height: 80px;">
+        <div class="filter"></div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="row justify-content-center"> <!-- Center the form -->
+        <div class="col-lg-4 col-sm-6">
+            <div class="card card-register">
+                <h3 class="title">Event Management</h3>
+                <form [formGroup]="eventForm" (ngSubmit)="onSubmit()">
+                    <!-- Event Title -->
+                    <div class="form-group">
+                        <label for="eventTitle">Event Title</label>
+                        <input type="text" class="form-control" id="eventTitle" placeholder="Enter event title" formControlName="eventTitle">
+                        <i class="fa fa-info-circle" title="Event title must be alphanumeric and less than 20 characters long"></i>
+                        <div *ngIf="eventForm.get('eventTitle').invalid && (eventForm.get('eventTitle').dirty || eventForm.get('eventTitle').touched)" class="text-light">
+                            Event title is required and must be alphanumeric, less than 20 characters.
+                        </div>
+                    </div>
+
+                    <!-- Event Date -->
+                    <div class="form-group">
+                        <label for="eventTitle">Event Title</label>
+                        <input type="date" class="form-control" id="eventDate" formControlName="eventDate" [min]="minDate">
+                        <i class="fa fa-info-circle" title="Event date cannot be before the current date and must be at least one week ahead"></i>
+                        <div *ngIf="eventForm.get('eventDate').invalid && (eventForm.get('eventDate').dirty || eventForm.get('eventDate').touched)" class="text-light">
+                            Event date is required and must be at least one week ahead.
+                        </div>
+                    </div>
+
+                    <!-- Event Location -->
+                    <div class="form-group">
+                        <label for="eventLocation">Event Location</label>
+                        <input type="text" class="form-control" id="eventLocation" placeholder="Enter event location" formControlName="eventLocation">
+                        <i class="fa fa-info-circle" title="Event location must be alphanumeric"></i>
+                        <div *ngIf="eventForm.get('eventLocation').invalid && (eventForm.get('eventLocation').dirty || eventForm.get('eventLocation').touched)" class="text-light">
+                            Event location is required and must be alphanumeric.
+                        </div>
+                    </div>
+
+                    <!-- Event Description -->
+                    <div class="form-group">
+                        <label for="eventDescription">Event Description</label>
+                        <textarea class="form-control" id="eventDescription" rows="4" placeholder="Enter event description" formControlName="eventDescription"></textarea>
+                        <i class="fa fa-info-circle" title="Event description must be alphanumeric"></i>
+                        <div *ngIf="eventForm.get('eventDescription').invalid && (eventForm.get('eventDescription').dirty || eventForm.get('eventDescription').touched)" class="text-light">
+                            Event description is required and must be alphanumeric.
+                        </div>
+                    </div>
+
+                    <!-- Submit Button -->
+                    <button type="submit" class="btn btn-primary" [disabled]="eventForm.invalid">Create Event</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
-import { FormsModule } from '@angular/forms';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { NouisliderModule } from 'ng2-nouislider';
 import { JwBootstrapSwitchNg2Module } from 'jw-bootstrap-switch-ng2';
 import { RouterModule } from '@angular/router';
@@ -17,6 +17,9 @@ import { NgbdModalContent } from './modal/modal.component';
 import {TestCompComponent} from "./test-comp/test-comp.component";
 import { ShowPartClientComponent } from './show-part-client/show-part-client.component';
 import { ChatComponent } from './chat/chat.component';
+import { BlogComponent } from './blog/blog.component';
+import { EventComponent } from './event/event.component';
+import { EventmanagementComponent } from './eventmanagement/eventmanagement.component';
 
 @NgModule({
     imports: [
@@ -25,7 +28,8 @@ import { ChatComponent } from './chat/chat.component';
         NgbModule,
         NouisliderModule,
         RouterModule,
-        JwBootstrapSwitchNg2Module
+        JwBootstrapSwitchNg2Module,
+        ReactiveFormsModule
     ],
     declarations: [
         ComponentsComponent,
@@ -38,7 +42,10 @@ import { ChatComponent } from './chat/chat.component';
         NgbdModalComponent,
         NgbdModalContent,
         ShowPartClientComponent,
-        ChatComponent
+        ChatComponent,
+        BlogComponent,
+        EventComponent,
+        EventmanagementComponent
     ],
     entryComponents: [NgbdModalContent],
     exports:[ ComponentsComponent ]
