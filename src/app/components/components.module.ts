@@ -16,6 +16,7 @@ import { NgbdModalComponent } from './modal/modal.component';
 import { NgbdModalContent } from './modal/modal.component';
 import {TestCompComponent} from "./test-comp/test-comp.component";
 import { ShowPartClientComponent } from './show-part-client/show-part-client.component';
+import { ChatComponent } from './chat/chat.component';
 
 @NgModule({
     imports: [
@@ -36,7 +37,8 @@ import { ShowPartClientComponent } from './show-part-client/show-part-client.com
         TestCompComponent,
         NgbdModalComponent,
         NgbdModalContent,
-        ShowPartClientComponent
+        ShowPartClientComponent,
+        ChatComponent
     ],
     entryComponents: [NgbdModalContent],
     exports:[ ComponentsComponent ]

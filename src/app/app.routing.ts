@@ -11,6 +11,7 @@ import { NucleoiconsComponent } from './components/nucleoicons/nucleoicons.compo
 import {TestCompComponent} from "./components/test-comp/test-comp.component";
 import {ShowPartClientComponent} from "./components/show-part-client/show-part-client.component";
 import {SigninComponent} from "./examples/signin/signin.component";
+import {ChatComponent} from "./components/chat/chat.component";
 
 const routes: Routes =[
     { path: '', redirectTo: 'home', pathMatch: 'full' },
@@ -22,6 +23,7 @@ const routes: Routes =[
     { path: 'nucleoicons',      component: NucleoiconsComponent },
     { path: 'test', component: TestCompComponent },
     { path: 'part-client', component: ShowPartClientComponent },
+    { path: 'chat', component: ChatComponent },
 ];
 
 @NgModule({
