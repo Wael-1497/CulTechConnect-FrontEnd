@@ -20,6 +20,7 @@ import { ChatComponent } from './chat/chat.component';
 import { BlogComponent } from './blog/blog.component';
 import { EventComponent } from './event/event.component';
 import { EventmanagementComponent } from './eventmanagement/eventmanagement.component';
+import {HttpClientModule} from "@angular/common/http";
 
 @NgModule({
     imports: [
@@ -29,7 +30,7 @@ import { EventmanagementComponent } from './eventmanagement/eventmanagement.comp
         NouisliderModule,
         RouterModule,
         JwBootstrapSwitchNg2Module,
-        ReactiveFormsModule
+        ReactiveFormsModule,
     ],
     declarations: [
         ComponentsComponent,

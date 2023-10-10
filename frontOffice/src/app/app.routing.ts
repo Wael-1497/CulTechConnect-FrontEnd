@@ -15,6 +15,9 @@ import {ChatComponent} from "./components/chat/chat.component";
 import {BlogComponent} from "./components/blog/blog.component";
 import {EventComponent} from "./components/event/event.component";
 import {EventmanagementComponent} from "./components/eventmanagement/eventmanagement.component";
+import {CheckoutComponent} from "./checkout/checkout.component";
+import {CancelComponent} from "./cancel/cancel.component";
+import {SuccessComponent} from "./success/success.component";
 
 const routes: Routes =[
     { path: '', redirectTo: 'home', pathMatch: 'full' },
@@ -29,7 +32,10 @@ const routes: Routes =[
     { path: 'chat', component: ChatComponent },
     { path: 'blog', component: BlogComponent },
     { path: 'event', component: EventComponent },
-    { path: 'eventmanagement', component: EventmanagementComponent }
+    { path: 'eventmanagement', component: EventmanagementComponent },
+    { path: 'checkout',  component: CheckoutComponent },
+    { path: 'cancel', component: CancelComponent },
+    { path: 'success', component: SuccessComponent },
 
 ];
 

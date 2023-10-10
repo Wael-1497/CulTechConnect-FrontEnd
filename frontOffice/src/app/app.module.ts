@@ -12,13 +12,20 @@ import { FooterComponent } from './shared/footer/footer.component';
 import { ComponentsModule } from './components/components.module';
 import { ExamplesModule } from './examples/examples.module';
 import { TestCompComponent } from './components/test-comp/test-comp.component';
+import { CancelComponent } from './cancel/cancel.component';
+import { SuccessComponent } from './success/success.component';
+import {HttpClientModule} from "@angular/common/http";
+import { CheckoutComponent } from './checkout/checkout.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     NavbarComponent,
-    FooterComponent
+    FooterComponent,
+    CancelComponent,
+    SuccessComponent,
+    CheckoutComponent
   ],
   imports: [
     BrowserModule,
@@ -28,6 +35,8 @@ import { TestCompComponent } from './components/test-comp/test-comp.component';
     ComponentsModule,
     ExamplesModule,
     AppRoutingModule,
+    HttpClientModule
+
   ],
   providers: [],
   bootstrap: [AppComponent]
