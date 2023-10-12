@@ -36,9 +36,9 @@ Paper Kit 2 Angular is built on top of Bootstrap 4, so it fully supports it. Mos
 [<img src="https://s3.amazonaws.com/creativetim_bucket/github/angular.png" width="60" height="60" />](https://www.creative-tim.com/product/paper-kit-2-angular)
 
 
-| HTML | Angular |
-| --- | --- |
-| ![Paper Kit 2 HTML](https://s3.amazonaws.com/creativetim_bucket/products/61/opt_pk2_thumbnail.jpg) | ![Paper Kit 2 Angular](https://s3.amazonaws.com/creativetim_bucket/products/65/opt_pk2_angular_thumbnail.jpg)
+| HTML                                                                                               | Angular                                                                                                       |
+|----------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------|
+| ![Paper Kit 2 HTML](https://s3.amazonaws.com/creativetim_bucket/products/61/opt_pk2_thumbnail.jpg) | ![Paper Kit 2 Angular](https://s3.amazonaws.com/creativetim_bucket/products/65/opt_pk2_angular_thumbnail.jpg) |
 
 ## Demo
 

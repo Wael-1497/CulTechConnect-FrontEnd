@@ -1,12 +1,14 @@
 import {Component, OnInit, Renderer2} from '@angular/core';
 import {NgbDateStruct} from "@ng-bootstrap/ng-bootstrap";
 import {ModalDismissReasons, NgbModal} from '@ng-bootstrap/ng-bootstrap';
+import {PartershipService} from "../services/partership.service";
 
 
 @Component({
   selector: 'app-show-part-client',
   templateUrl: './show-part-client.component.html',
-  styleUrls: ['./show-part-client.component.scss']
+  styleUrls: ['./show-part-client.component.scss'],
+  providers: [PartershipService]
 })
 export class ShowPartClientComponent implements OnInit {
   closeResult: string;
@@ -17,7 +19,10 @@ export class ShowPartClientComponent implements OnInit {
   focus2;
   date: {year: number, month: number};
   model: NgbDateStruct;
-  constructor( private renderer : Renderer2, private modalService: NgbModal) {}
+  parts: any = [];
+  constructor( private renderer : Renderer2, private modalService: NgbModal, private partershipService: PartershipService) {
+
+}
   isWeekend(date: NgbDateStruct) {
     const d = new Date(date.year, date.month - 1, date.day);
     return d.getDay() === 0 || d.getDay() === 6;
@@ -28,6 +33,10 @@ export class ShowPartClientComponent implements OnInit {
   }
 
   ngOnInit() {
+    console.log('ngOnInit...');
+    this.partershipService.getPart().subscribe((datas: any[])=>{
+      this.parts=datas;
+    })
     let input_group_focus = document.getElementsByClassName('form-control');
     let input_group = document.getElementsByClassName('input-group');
     for (let i = 0; i < input_group.length; i++) {
