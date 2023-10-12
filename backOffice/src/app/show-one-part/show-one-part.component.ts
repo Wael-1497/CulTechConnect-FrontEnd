@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import {ActivatedRoute} from "@angular/router";
 import {PartnershipService} from "../services/partnership.service";
 import {Partnership} from "../models/partnership.model";
-import {Observable} from "rxjs";
 
 @Component({
   selector: 'app-show-one-part',

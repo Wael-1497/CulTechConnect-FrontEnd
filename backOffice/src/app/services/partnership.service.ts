@@ -12,7 +12,6 @@ export class PartnershipService {
   readonly ENDPOINT_ONE_PART= "partnership/part";
   private baseUrl = 'http://localhost:8222/partnership/part';
 
-  private partnership: Partnership[];
 
   constructor(private httpClient: HttpClient) { }
   getPartnershipById(id: number): Observable<any> {
