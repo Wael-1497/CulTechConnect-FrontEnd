@@ -63,7 +63,7 @@ export const AdminLayoutRoutes: Routes = [
     { path: 'maps',           component: MapsComponent },
     { path: 'notifications',  component: NotificationsComponent },
     { path: 'upgrade',        component: UpgradeComponent },
-    { path: 'test',        component: ShowPartComponent },
+    { path: 'parts',        component: ShowPartComponent },
     { path: 'part',        component: ShowOnePartComponent },
     { path: 'up-part',        component: UpdatePartComponent }
 
