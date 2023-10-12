@@ -33,7 +33,7 @@
                                     <td>{{ part.typePartenariat }}</td>
                                     <td class="text-primary">${{ part.budget }}</td>
                                     <td>
-                                        <button type="button" class="btn btn-outline-info btn-sm" (click)="redirectToPartInfo()">S</button>
+                                        <button type="button" class="btn btn-outline-info btn-sm" (click)="redirectToPartInfo(part.id)">S</button>
                                         <button type="button" class="btn btn-outline-secondary btn-sm" (click)="redirectToUpPart()">U</button>
                                         <button type="button" class="btn btn-outline-danger btn-sm">X</button>
                                     </td>
