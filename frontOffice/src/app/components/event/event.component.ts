@@ -20,6 +20,7 @@ export class EventComponent {
   id: any;
   stripePromise = loadStripe(environment.stripe);
   isBudgetNumeric: boolean = true;
+  closeResult: string;
 
 
   // END
@@ -27,7 +28,6 @@ export class EventComponent {
   currentYear: number = new Date().getFullYear();
   showEventDetails1: boolean = false;
   showEventDetails2: boolean = false;
-  closeResult: string;
   page = 4;
   page1 = 5;
   focus;
@@ -35,7 +35,10 @@ export class EventComponent {
   focus2;
   date: {year: number, month: number};
   model: NgbDateStruct;
-  constructor( private renderer : Renderer2, private modalService: NgbModal, private partershipService: PartershipService,private router: Router,private route: ActivatedRoute, private http: HttpClient) {}   // ADD PARTNERSHIP
+  constructor( private renderer : Renderer2,
+               private modalService: NgbModal, private partershipService: PartershipService,
+               private router: Router,private route: ActivatedRoute, private http: HttpClient) {}   // ADD PARTNERSHIP
+
   // ADD PARTNERSHIP
 
   newPartnership(): void {

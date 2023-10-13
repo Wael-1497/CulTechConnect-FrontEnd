@@ -65,6 +65,6 @@ export const AdminLayoutRoutes: Routes = [
     { path: 'upgrade',        component: UpgradeComponent },
     { path: 'parts',        component: ShowPartComponent },
     { path: 'part/:id',        component: ShowOnePartComponent },
-    { path: 'up-part',        component: UpdatePartComponent }
+    { path: 'up-part/:id',        component: UpdatePartComponent }
 
 ];

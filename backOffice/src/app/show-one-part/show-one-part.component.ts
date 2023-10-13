@@ -9,7 +9,7 @@ import {Partnership} from "../models/partnership.model";
   styleUrls: ['./show-one-part.component.scss']
 })
 export class ShowOnePartComponent implements OnInit {
-  partnership: Partnership;
+  partnership: any;
   id: any;
 
   constructor(private route: ActivatedRoute, private partnershipService: PartnershipService) {}
