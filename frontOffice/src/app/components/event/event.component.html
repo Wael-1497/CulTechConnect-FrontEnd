@@ -33,6 +33,7 @@
                     <div class="event-card">
                         <h4>Event Title 1</h4>
                         <p>Event Description 1</p>
+                        <div class="container d-flex justify-content-center align-items-center">
                         <button class="btn btn-success" (click)="toggleEventDetails(1)">Details</button>
                         <div class="event-details" *ngIf="showEventDetails1">
                             <p>Date: Event Date 1</p>
@@ -40,11 +41,13 @@
                             <p>Description: Event Description 1</p>
                         </div>
                         <button class="btn btn-primary">Participate</button>
+                        <button type="button" class="btn btn-secondary" (click)="open(content)">Checkout</button>
+                        </div>
 
                         <!--Checkout Button -->
-                        <div class="container d-flex justify-content-center align-items-center">
-                            <button type="button" class="btn btn-outline-info btn-round" (click)="open(content)">Checkout</button>
-                        </div>
+<!--                        <div class="container d-flex justify-content-center align-items-center">-->
+<!--                            <button type="button" class="btn btn-outline-info btn-round" (click)="open(content)">Checkout</button>-->
+<!--                        </div>-->
 
                         <ng-template #content let-modal>
                             <div class="modal-header">
