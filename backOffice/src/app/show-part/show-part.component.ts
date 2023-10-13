@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import {Router} from "@angular/router";
 import {PartnershipService} from "../services/partnership.service";
+import {ModalDismissReasons, NgbModal} from '@ng-bootstrap/ng-bootstrap';
+
 
 @Component({
   selector: 'app-show-part',
@@ -9,6 +11,7 @@ import {PartnershipService} from "../services/partnership.service";
 })
 export class ShowPartComponent implements OnInit {
   parts: any = [];
+  private modalService: NgbModal
 
   constructor(private router: Router, private partnershipService: PartnershipService) { }
 
