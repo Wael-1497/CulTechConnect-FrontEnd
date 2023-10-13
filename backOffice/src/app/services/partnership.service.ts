@@ -11,6 +11,7 @@ export class PartnershipService {
   readonly ENDPOINT_PART= "/partnership/all-part";
   readonly ENDPOINT_ONE_PART= "partnership/part";
   private baseUrl = 'http://localhost:8222/partnership/part';
+  private DelUrl = 'http://localhost:8082/partnership/delete-part';
 
 
   constructor(private httpClient: HttpClient) { }
@@ -26,5 +27,7 @@ export class PartnershipService {
   getPart(){
     return this.httpClient.get(this.API_URL+this.ENDPOINT_PART);
   }
-
+  deletePart(id: number): Observable<any> {
+    return this.httpClient.delete(`${this.DelUrl}/${id}`, {responseType: 'text'});
+  }
 }
