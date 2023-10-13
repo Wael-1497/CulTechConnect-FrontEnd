@@ -21,8 +21,8 @@ export class CheckoutComponent {
       // amount on cents *10 => to be on dollar
       amount: 99900,
       quantity: '1',
-      cancelUrl: 'http://localhost:4200/cancel',
-      successUrl: 'http://localhost:4200/success',
+      cancelUrl: 'http://localhost:4200/#/event',
+      successUrl: 'http://localhost:4200/#/part-client',
     };
 
     const stripe = await this.stripePromise;
