@@ -47,51 +47,57 @@
 
                         <ng-template #content let-modal>
                             <div class="modal-header">
-                                <h4 class="modal-title" id="modal-basic-title">Checkout</h4>
+                                <h4 class="modal-title" id="modal-basic-title2">Checkout</h4>
                                 <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
                                     <span aria-hidden="true">&times;</span>
                                 </button>
                             </div>
-                            <div class="modal-body">
-                                <form>
+
+<!--                            // ADD PARTNERSHIP-->
+                            <div class="modal-body" [hidden]="submitted">
+                                <form (ngSubmit)="onSubmit()">
                                     <div class="form-group">
-                                        <label for="firstname">Event</label>
+                                        <label for="name">Event</label>
                                         <div class="input-group">
-                                            <input id="firstname" value="GALITE CAMP 2.0" class="form-control" disabled />
+                                            <input id="id" [(ngModel)]="this.id" class="form-control" name="id" />
                                         </div>
                                     </div>
                                     <div class="form-group">
-                                        <label for="selectOption">Type de partenariat</label>
+                                        <label for="name">Type de partenariat</label>
                                         <div class="input-group">
-                                            <select id="selectOption" class="form-control">
-                                                <option value="option1">Partenariat Commercial</option>
+                                            <select id="typePartenariat" [(ngModel)]="partnership.typePartenariat" class="form-control" name="typePartenariat">
+                                                <option value="PartenariatCommercial">Partenariat Commercial</option>
                                                 <option value="option2">Option 2</option>
                                                 <option value="option3">Option 3</option>
                                             </select>
                                         </div>
                                     </div>
                                     <div class="form-group">
-                                        <label for="regularInput">Description</label>
+                                        <label for="name">Description</label>
                                         <div class="input-group">
-                                            <input id="regularInput" class="form-control" />
+                                            <input id="description" [(ngModel)]="partnership.description" class="form-control" name="description" />
                                         </div>
                                     </div>
                                     <div class="form-group">
-                                        <label for="regularInput">Budget</label>
+                                        <label for="name">Budget</label>
                                         <div class="input-group">
-                                            <input id="budget" class="form-control" />
+                                            <input id="budget" [(ngModel)]="partnership.budget" class="form-control" name="budget" />
                                         </div>
                                     </div>
+                                    <div class="modal-footer d-flex justify-content-center">
+                                        <button  type="submit" class="btn btn-outline-info btn-round ">Continue</button>
+                                    </div>
                                 </form>
-                            </div>
-                            <div class="modal-footer d-flex justify-content-center">
-                                <button type="button" class="btn btn-outline-info btn-round " (click)="modal.close('Save click')">Continue</button>
-                            </div>
+                            </div >
                         </ng-template>
 
                     </div>
 
                 </form>
+            </div>
+            <div [hidden]="!submitted">
+                <h4>You submitted successfully!</h4>
+                <!-- <button class="btn btn-success" (click)="newEmployee()">Add</button> -->
             </div>
         </div>
         <div class="col-lg-4 col-sm-6">
@@ -110,53 +116,7 @@
                         </div>
                         <button class="btn btn-primary">Participate</button>
                         <!--Checkout Button -->
-                        <div class="container d-flex justify-content-center align-items-center">
-                            <button type="button" class="btn btn-outline-info btn-round" (click)="open(content)">Checkout</button>
-                        </div>
 
-                        <ng-template #content let-modal>
-                            <div class="modal-header">
-                                <h4 class="modal-title" id="modal-basic-title">Checkout</h4>
-                                <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
-                                    <span aria-hidden="true">&times;</span>
-                                </button>
-                            </div>
-                            <div class="modal-body">
-                                <form>
-                                    <div class="form-group">
-                                        <label for="firstname">Event</label>
-                                        <div class="input-group">
-                                            <input id="firstname" value="GALITE CAMP 2.0" class="form-control" disabled />
-                                        </div>
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="selectOption">Type de partenariat</label>
-                                        <div class="input-group">
-                                            <select id="selectOption" class="form-control">
-                                                <option value="option1">Partenariat Commercial</option>
-                                                <option value="option2">Option 2</option>
-                                                <option value="option3">Option 3</option>
-                                            </select>
-                                        </div>
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="regularInput">Description</label>
-                                        <div class="input-group">
-                                            <input id="regularInput" class="form-control" />
-                                        </div>
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="regularInput">Budget</label>
-                                        <div class="input-group">
-                                            <input id="budget" class="form-control" />
-                                        </div>
-                                    </div>
-                                </form>
-                            </div>
-                            <div class="modal-footer d-flex justify-content-center">
-                                <button type="button" class="btn btn-outline-info btn-round " (click)="modal.close('Save click')">Continue</button>
-                            </div>
-                        </ng-template>
                     </div>
                 </form>
             </div>

@@ -1,5 +1,8 @@
 import {Component, OnInit, Renderer2} from '@angular/core';
 import {ModalDismissReasons, NgbDateStruct, NgbModal} from "@ng-bootstrap/ng-bootstrap";
+import {Partnership} from "../models/partnership";
+import {PartershipService} from "../services/partership.service";
+import {ActivatedRoute, Router} from "@angular/router";
 
 @Component({
   selector: 'app-event',
@@ -7,6 +10,15 @@ import {ModalDismissReasons, NgbDateStruct, NgbModal} from "@ng-bootstrap/ng-boo
   styleUrls: ['./event.component.css']
 })
 export class EventComponent {
+  // ADD PARTNERSHIP
+
+  partnership: Partnership = new Partnership();
+  submitted = false;
+  id: any;
+
+
+  // END
+
   currentYear: number = new Date().getFullYear();
   showEventDetails1: boolean = false;
   showEventDetails2: boolean = false;
@@ -18,7 +30,31 @@ export class EventComponent {
   focus2;
   date: {year: number, month: number};
   model: NgbDateStruct;
-  constructor( private renderer : Renderer2, private modalService: NgbModal) {}
+  constructor( private renderer : Renderer2, private modalService: NgbModal, private partershipService: PartershipService,private router: Router,private route: ActivatedRoute) {}   // ADD PARTNERSHIP
+  // ADD PARTNERSHIP
+
+  newPartnership(): void {
+    this.submitted = false;
+    this.partnership = new Partnership();
+  }
+
+  save() {
+    this.partershipService.createPart(this.id, this.partnership)
+        .subscribe(data => console.log(data), error => console.log(error));
+    this.partnership = new Partnership();
+    this.gotoList();
+  }
+
+  onSubmit() {
+    this.submitted = true;
+    this.save();
+  }
+
+  gotoList() {
+    this.router.navigate(['/part-client']);
+  }
+
+  // END
   isWeekend(date: NgbDateStruct) {
     const d = new Date(date.year, date.month - 1, date.day);
     return d.getDay() === 0 || d.getDay() === 6;
@@ -27,6 +63,7 @@ export class EventComponent {
     return date.month !== current.month;
   }
   ngOnInit() {
+    this.id=this.route.snapshot.params['id'];
     let input_group_focus = document.getElementsByClassName('form-control');
     let input_group = document.getElementsByClassName('input-group');
     for (let i = 0; i < input_group.length; i++) {
