@@ -1,6 +1,7 @@
 import { Routes } from '@angular/router';
 
 import { DashboardComponent } from '../../dashboard/dashboard.component';
+import { DashboardComponent as DashboardComponent2 } from '../../components/dashboard/dashboard.component';
 import { UserProfileComponent } from '../../user-profile/user-profile.component';
 import { TableListComponent } from '../../table-list/table-list.component';
 import { TypographyComponent } from '../../typography/typography.component';
@@ -11,6 +12,8 @@ import { UpgradeComponent } from '../../upgrade/upgrade.component';
 import {ShowPartComponent} from "../../show-part/show-part.component";
 import {ShowOnePartComponent} from "../../show-one-part/show-one-part.component";
 import {UpdatePartComponent} from "../../update-part/update-part.component";
+import {RegisterComponent} from "../../components/register/register.component";
+import {LoginComponent} from "../../components/login/login.component";
 
 export const AdminLayoutRoutes: Routes = [
     // {
@@ -65,6 +68,10 @@ export const AdminLayoutRoutes: Routes = [
     { path: 'upgrade',        component: UpgradeComponent },
     { path: 'parts',        component: ShowPartComponent },
     { path: 'part/:id',        component: ShowOnePartComponent },
-    { path: 'up-part/:id',        component: UpdatePartComponent }
+    { path: 'up-part/:id',        component: UpdatePartComponent },
+    { path: "register", component: RegisterComponent },
+    { path: "login", component: LoginComponent },
+    { path: "hello", component: DashboardComponent2 },
+
 
 ];
