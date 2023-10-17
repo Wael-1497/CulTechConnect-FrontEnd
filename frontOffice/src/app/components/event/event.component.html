@@ -25,23 +25,23 @@
 
 <div class="container">
     <div class="row">
-        <div class="col-lg-4 col-sm-6">
+        <div class="col-lg-4 col-sm-6" *ngFor="let event of events">
             <div class="card card-register">
                 <h3 class="title">Events</h3>
-                <form class="event-form">
                     <!-- Event Card 1 -->
                     <div class="event-card">
-                        <h4>Event Title 1</h4>
-                        <p>Event Description 1</p>
+
+                        <h4>{{ event.title }}</h4>
+                        <p>{{ event.description }}</p>
                         <div class="container d-flex justify-content-center align-items-center">
-                        <button class="btn btn-success" (click)="toggleEventDetails(1)">Details</button>
-                        <div class="event-details" *ngIf="showEventDetails1">
-                            <p>Date: Event Date 1</p>
-                            <p>Location: Event Location 1</p>
-                            <p>Description: Event Description 1</p>
-                        </div>
-                        <button class="btn btn-primary">Participate</button>
-                        <button type="button" class="btn btn-secondary" (click)="open(content)">Checkout</button>
+                            <button type="button" class="btn btn-secondary" (click)="open(content)">Checkout</button>
+                            <button class="btn btn-success" (click)="toggleEventDetails(event.id)">Details</button>
+                            <div class="event-details" *ngIf="event.id === activeEventId">
+                                <p>Date: {{ event.date | date }}</p>
+                                <p>Location: {{ event.location }}</p>
+                                <p>Description: {{ event.description }}</p>
+                            </div>
+                            <button class="btn btn-primary">Participate</button>
                         </div>
 
                         <!--Checkout Button -->
@@ -108,32 +108,10 @@
 
                     </div>
 
-                </form>
             </div>
             <div [hidden]="!submitted">
                 <h4>You submitted successfully!</h4>
                 <!-- <button class="btn btn-success" (click)="newEmployee()">Add</button> -->
-            </div>
-        </div>
-        <div class="col-lg-4 col-sm-6">
-            <div class="card card-register">
-                <h3 class="title">Events</h3>
-                <form class="event-form">
-                    <!-- Event Card 2 -->
-                    <div class="event-card">
-                        <h4>Event Title 2</h4>
-                        <p>Event Description 2</p>
-                        <button class="btn btn-success" (click)="toggleEventDetails(2)">Details</button>
-                        <div class="event-details" *ngIf="showEventDetails2">
-                            <p>Date: Event Date 2</p>
-                            <p>Location: Event Location 2</p>
-                            <p>Description: Event Description 2</p>
-                        </div>
-                        <button class="btn btn-primary">Participate</button>
-                        <!--Checkout Button -->
-
-                    </div>
-                </form>
             </div>
         </div>
         <!-- Add more event cards here -->

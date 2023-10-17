@@ -18,6 +18,8 @@ import {EventmanagementComponent} from "./components/eventmanagement/eventmanage
 import {CheckoutComponent} from "./checkout/checkout.component";
 import {CancelComponent} from "./cancel/cancel.component";
 import {SuccessComponent} from "./success/success.component";
+import {CustomerSupportComponent} from "./components/customer-support/customer-support.component";
+import {DemoComponent} from "./components/demo/demo.component";
 
 const routes: Routes =[
     { path: '', redirectTo: 'home', pathMatch: 'full' },
@@ -36,6 +38,8 @@ const routes: Routes =[
     { path: 'checkout',  component: CheckoutComponent },
     { path: 'cancel', component: CancelComponent },
     { path: 'success', component: SuccessComponent },
+    { path: 'bot', component: CustomerSupportComponent  },
+    { path: 'demo', component: DemoComponent  },
 
 ];
 

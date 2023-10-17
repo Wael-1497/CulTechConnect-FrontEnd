@@ -6,6 +6,8 @@ import {ActivatedRoute, Router} from "@angular/router";
 import {environment} from "../../../environments/environment";
 import { loadStripe } from '@stripe/stripe-js';
 import {HttpClient} from "@angular/common/http";
+import { Events } from '../models/Events';
+import { EventmanagementService } from '../services/eventmanagement.service';
 
 @Component({
   selector: 'app-event',
@@ -21,11 +23,12 @@ export class EventComponent {
   stripePromise = loadStripe(environment.stripe);
   isBudgetNumeric: boolean = true;
   closeResult: string;
-
+  activeEventId: number | null = null;
+  events: Events[] = [];
+  currentYear: number = new Date().getFullYear();
 
   // END
 
-  currentYear: number = new Date().getFullYear();
   showEventDetails1: boolean = false;
   showEventDetails2: boolean = false;
   page = 4;
@@ -37,7 +40,7 @@ export class EventComponent {
   model: NgbDateStruct;
   constructor( private renderer : Renderer2,
                private modalService: NgbModal, private partershipService: PartershipService,
-               private router: Router,private route: ActivatedRoute, private http: HttpClient) {}   // ADD PARTNERSHIP
+               private router: Router,private route: ActivatedRoute, private http: HttpClient, private eventService: EventmanagementService) {}   // ADD PARTNERSHIP
 
   // ADD PARTNERSHIP
 
@@ -106,6 +109,7 @@ export class EventComponent {
     return date.month !== current.month;
   }
   ngOnInit() {
+    this.fetchEvents();
     this.id=this.route.snapshot.params['id'];
     let input_group_focus = document.getElementsByClassName('form-control');
     let input_group = document.getElementsByClassName('input-group');
@@ -127,6 +131,11 @@ export class EventComponent {
       this.closeResult = `Dismissed ${this.getDismissReason(reason)}`;
     });
   }
+  fetchEvents() {
+    this.eventService.getAllEvents().subscribe((events) => {
+      this.events = events as Events[];
+    });
+  }
 
   private getDismissReason(reason: any): string {
     if (reason === ModalDismissReasons.ESC) {
@@ -137,11 +146,11 @@ export class EventComponent {
       return `with: ${reason}`;
     }
   }
-  toggleEventDetails(eventNumber: number): void {
-    if (eventNumber === 1) {
-      this.showEventDetails1 = !this.showEventDetails1;
-    } else if (eventNumber === 2) {
-      this.showEventDetails2 = !this.showEventDetails2;
+  toggleEventDetails(eventId: number): void {
+    if (this.activeEventId === eventId) {
+      this.activeEventId = null;
+    } else {
+      this.activeEventId = eventId;
     }
   }
 }

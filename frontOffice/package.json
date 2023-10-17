@@ -34,6 +34,7 @@
     "jw-bootstrap-switch-ng2": "2.0.5",
     "ng2-nouislider": "1.8.2",
     "nouislider": "14.6.3",
+    "openai": "^3.1.0",
     "perfect-scrollbar": "^1.5.5",
     "popper.js": "1.16.1",
     "rxjs": "~7.5.0",

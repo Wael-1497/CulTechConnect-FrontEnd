@@ -8,13 +8,15 @@ import { SidebarComponent } from './sidebar/sidebar.component';
 import { DashboardComponent} from "./dashboard/dashboard.component";
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
-import {ReactiveFormsModule} from "@angular/forms";
+import {FormsModule, ReactiveFormsModule} from "@angular/forms";
+import { BlogComponent } from './blog/blog.component';
 
 @NgModule({
   imports: [
     CommonModule,
     RouterModule,
     ReactiveFormsModule,
+    FormsModule,
   ],
   declarations: [
     FooterComponent,
@@ -22,7 +24,8 @@ import {ReactiveFormsModule} from "@angular/forms";
     SidebarComponent,
     DashboardComponent,
     LoginComponent,
-    RegisterComponent
+    RegisterComponent,
+    BlogComponent
   ],
   exports: [
     FooterComponent,

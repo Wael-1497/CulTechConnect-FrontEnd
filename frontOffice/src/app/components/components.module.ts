@@ -21,6 +21,8 @@ import { BlogComponent } from './blog/blog.component';
 import { EventComponent } from './event/event.component';
 import { EventmanagementComponent } from './eventmanagement/eventmanagement.component';
 import {HttpClientModule} from "@angular/common/http";
+import { CustomerSupportComponent } from './customer-support/customer-support.component';
+import { DemoComponent } from './demo/demo.component';
 
 @NgModule({
     imports: [
@@ -46,7 +48,9 @@ import {HttpClientModule} from "@angular/common/http";
         ChatComponent,
         BlogComponent,
         EventComponent,
-        EventmanagementComponent
+        EventmanagementComponent,
+        CustomerSupportComponent,
+        DemoComponent
     ],
     entryComponents: [NgbdModalContent],
     exports:[ ComponentsComponent ]
