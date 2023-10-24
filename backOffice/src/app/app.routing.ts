@@ -4,7 +4,7 @@ import { BrowserModule  } from '@angular/platform-browser';
 import { Routes, RouterModule } from '@angular/router';
 
 import { AdminLayoutComponent } from './layouts/admin-layout/admin-layout.component';
-import {BlogComponent} from "./components/blog/blog.component";
+import {BlogComponent} from "./blog/blog.component";
 
 const routes: Routes =[
   {

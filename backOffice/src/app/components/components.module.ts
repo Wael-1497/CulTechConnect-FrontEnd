@@ -9,7 +9,7 @@ import { DashboardComponent} from "./dashboard/dashboard.component";
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
-import { BlogComponent } from './blog/blog.component';
+import { BlogComponent } from '../blog/blog.component';
 
 @NgModule({
   imports: [

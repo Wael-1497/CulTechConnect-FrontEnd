@@ -11,29 +11,10 @@ declare interface RouteInfo {
 }
 export const ROUTES: RouteInfo[] = [
     { path: '/dashboard', title: 'Dashboard',  icon: 'dashboard', class: '' },
-    { path: '/parts', title: 'Liste des partenariats',  icon: 'format_list_bulleted', class: '', subMenu: [
-            {
-                path: '/test/sous-menu-1',
-                title: 'Sous-menu 1',
-                icon: 'sub_menu_icon_1',
-                class: ''
-            },
-            {
-                path: '/test/sous-menu-2',
-                title: 'Sous-menu 2',
-                icon: 'sub_menu_icon_2',
-                class: ''
-            }
-            // Ajoutez d'autres sous-menus si nécessaire
-        ] },
     { path: '/user-profile', title: 'User Profile',  icon:'person', class: '' },
-    { path: '/table-list', title: 'Table List',  icon:'content_paste', class: '' },
-    { path: '/typography', title: 'Typography',  icon:'library_books', class: '' },
-    { path: '/icons', title: 'Icons',  icon:'bubble_chart', class: '' },
-    { path: '/maps', title: 'Maps',  icon:'location_on', class: '' },
-    { path: '/notifications', title: 'Notifications',  icon:'notifications', class: '' },
+    { path: '/parts', title: 'Liste des partenariats',  icon: 'format_list_bulleted', class: ''},
+    { path: '/maps', title: 'Blog', icon: 'subject', class: '' },
     { path: '/upgrade', title: 'Upgrade to PRO',  icon:'unarchive', class: 'active-pro' },
-    { path: '/blog', title: 'Blog', icon: 'subject', class: '' },
 
 ];
 

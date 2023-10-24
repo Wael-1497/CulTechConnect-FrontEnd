@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import {blog} from "../../models/blog";
-import {BlogService} from "../../service/blog.service";
+import {blog} from "../models/blog";
+import {BlogService} from "../service/blog.service";
 
 @Component({
   selector: 'app-blog',
