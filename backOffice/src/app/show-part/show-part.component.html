@@ -1,4 +1,5 @@
 <!--suppress ALL -->
+<!--stripe git-->
 <div class="main-content">
     <div class="container-fluid">
         <div class="row">
@@ -10,296 +11,32 @@
                     </div>
                     <div class="card-body">
                         <div class="table-responsive">
+                            <!-- parts.component.html -->
                             <table class="table">
-                                <thead class=" text-primary">
-                                <th>
-                                    ID
-                                </th>
-                                <th>
-                                    Nom de l'organisation
-                                </th>
-                                <th>
-                                    Adresse
-                                </th>
-                                <th>
-                                    Evénements
-                                </th>
-                                <th>
-                                    Description
-                                </th>
-                                <th>
-                                    Type de partenariat
-                                </th>
-                                <th>
-                                    Budget
-                                </th>
-                                <th>
-
-                                </th>
+                                <thead class="text-primary">
+                                <th>ID</th>
+                                <th>Nom de l'organisation</th>
+                                <th>Adresse</th>
+                                <th>Evénements</th>
+                                <th>Description</th>
+                                <th>Type de partenariat</th>
+                                <th>Budget</th>
+                                <th></th>
                                 </thead>
                                 <tbody>
-                                <tr>
+                                <tr *ngFor="let part of parts">
+                                    <td>{{ part.id }}</td>
+                                    <td>{{ part.nomOrganisation }}</td>
+                                    <td>{{ part.adresse }}</td>
+                                    <td>{{ part.idEvenement }}</td>
+                                    <td>{{ part.description.length > 30 ? (part.description | slice:0:30) + ' ...' : part.description }}</td>
+                                    <td>{{ part.typePartenariat }}</td>
+                                    <td class="text-primary">${{ part.budget }}</td>
                                     <td>
-                                        1
+                                        <button type="button" class="btn btn-outline-info btn-sm" (click)="redirectToPartInfo(part.id)">S</button>
+                                        <button type="button" class="btn btn-outline-secondary btn-sm" [routerLink]="['/up-part', part.id]">U</button>
+                                        <button type="button" class="btn btn-outline-danger btn-sm" (click)="confirmDeletePart(part.id)" >X</button>
                                     </td>
-                                    <td>
-                                        Wallyscar
-                                    </td>
-                                    <td>
-                                        Tunisia
-                                    </td>
-                                    <td>
-                                        GALITE CAMP 2.0
-                                    </td>
-                                    <td >
-                                        Randotour vous emmènes vivre cette expérience ...
-                                    </td>
-
-
-                                    <td>
-                                        Partenariat Commercial
-                                    </td>
-                                    <td class="text-primary">
-                                        $3600,738
-                                    </td>
-                                    <td >
-                                        <button type="button" class="btn btn-outline-info btn-sm" (click)="redirectToPartInfo()">S</button>
-                                        <button type="button" class="btn btn-outline-secondary btn-sm" (click)="redirectToUpPart()">U</button>
-
-                                        <button type="button" class="btn btn-outline-danger btn-sm">X</button>
-
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        2
-                                    </td>
-                                    <td>
-                                        Wallyscar
-                                    </td>
-                                    <td>
-                                        Tunisia
-                                    </td>
-                                    <td>
-                                        GALITE CAMP 2.0
-                                    </td>
-                                    <td >
-                                        Randotour vous emmènes vivre cette expérience ...
-                                    </td>
-
-
-                                    <td>
-                                        Partenariat Commercial
-                                    </td>
-                                    <td class="text-primary">
-                                        $3600,738
-                                    </td>
-                                    <td >
-                                        <button type="button" class="btn btn-outline-info btn-sm" (click)="redirectToPartInfo()">S</button>
-                                        <button type="button" class="btn btn-outline-secondary btn-sm" (click)="redirectToUpPart()">U</button>
-
-                                        <button type="button" class="btn btn-outline-danger btn-sm">X</button>
-
-                                    </td>
-
-                                </tr>
-                                <tr>
-                                    <td>
-                                        3
-                                    </td>
-                                    <td>
-                                        Wallyscar
-                                    </td>
-                                    <td>
-                                        Tunisia
-                                    </td>
-                                    <td>
-                                        GALITE CAMP 2.0
-                                    </td>
-                                    <td >
-                                        Randotour vous emmènes vivre cette expérience ...
-                                    </td>
-
-
-                                    <td>
-                                        Partenariat Commercial
-                                    </td>
-                                    <td class="text-primary">
-                                        $3600,738
-                                    </td>
-                                    <td >
-                                        <button type="button" class="btn btn-outline-info btn-sm" (click)="redirectToPartInfo()">S</button>
-                                        <button type="button" class="btn btn-outline-secondary btn-sm" (click)="redirectToUpPart()">U</button>
-
-                                        <button type="button" class="btn btn-outline-danger btn-sm">X</button>
-
-                                    </td>
-
-                                </tr>
-                                <tr>
-                                    <td>
-                                        4
-                                    </td>
-                                    <td>
-                                        Wallyscar
-                                    </td>
-                                    <td>
-                                        Tunisia
-                                    </td>
-                                    <td>
-                                        GALITE CAMP 2.0
-                                    </td>
-                                    <td >
-                                        Randotour vous emmènes vivre cette expérience ...
-                                    </td>
-
-
-                                    <td>
-                                        Partenariat Commercial
-                                    </td>
-                                    <td class="text-primary">
-                                        $3600,738
-                                    </td>
-                                    <td >
-                                        <button type="button" class="btn btn-outline-info btn-sm" (click)="redirectToPartInfo()">S</button>
-                                        <button type="button" class="btn btn-outline-secondary btn-sm" (click)="redirectToUpPart()">U</button>
-
-                                        <button type="button" class="btn btn-outline-danger btn-sm">X</button>
-
-                                    </td>
-
-                                </tr>
-                                <tr>
-                                    <td>
-                                        5
-                                    </td>
-                                    <td>
-                                        Wallyscar
-                                    </td>
-                                    <td>
-                                        Tunisia
-                                    </td>
-                                    <td>
-                                        GALITE CAMP 2.0
-                                    </td>
-                                    <td >
-                                        Randotour vous emmènes vivre cette expérience ...
-                                    </td>
-
-
-                                    <td>
-                                        Partenariat Commercial
-                                    </td>
-                                    <td class="text-primary">
-                                        $3600,738
-                                    </td>
-                                    <td >
-                                        <button type="button" class="btn btn-outline-info btn-sm" (click)="redirectToPartInfo()">S</button>
-                                        <button type="button" class="btn btn-outline-secondary btn-sm" (click)="redirectToUpPart()">U</button>
-
-                                        <button type="button" class="btn btn-outline-danger btn-sm">X</button>
-
-                                    </td>
-
-                                </tr>
-                                <tr>
-                                    <td>
-                                        6
-                                    </td>
-                                    <td>
-                                        Wallyscar
-                                    </td>
-                                    <td>
-                                        Tunisia
-                                    </td>
-                                    <td>
-                                        GALITE CAMP 2.0
-                                    </td>
-                                    <td >
-                                        Randotour vous emmènes vivre cette expérience ...
-                                    </td>
-
-
-                                    <td>
-                                        Partenariat Commercial
-                                    </td>
-                                    <td class="text-primary">
-                                        $3600,738
-                                    </td>
-                                    <td >
-                                        <button type="button" class="btn btn-outline-info btn-sm" (click)="redirectToPartInfo()">S</button>
-                                        <button type="button" class="btn btn-outline-secondary btn-sm" (click)="redirectToUpPart()">U</button>
-
-                                        <button type="button" class="btn btn-outline-danger btn-sm">X</button>
-
-                                    </td>
-
-                                </tr>
-                                <tr>
-                                    <td>
-                                        7
-                                    </td>
-                                    <td>
-                                        Wallyscar
-                                    </td>
-                                    <td>
-                                        Tunisia
-                                    </td>
-                                    <td>
-                                        GALITE CAMP 2.0
-                                    </td>
-                                    <td >
-                                        Randotour vous emmènes vivre cette expérience ...
-                                    </td>
-
-
-                                    <td>
-                                        Partenariat Commercial
-                                    </td>
-                                    <td class="text-primary">
-                                        $3600,738
-                                    </td>
-                                    <td >
-                                        <button type="button" class="btn btn-outline-info btn-sm" (click)="redirectToPartInfo()">S</button>
-                                        <button type="button" class="btn btn-outline-secondary btn-sm" (click)="redirectToUpPart()">U</button>
-
-                                        <button type="button" class="btn btn-outline-danger btn-sm">X</button>
-
-                                    </td>
-
-                                </tr>
-                                <tr>
-                                    <td>
-                                        8
-                                    </td>
-                                    <td>
-                                        Wallyscar
-                                    </td>
-                                    <td>
-                                        Tunisia
-                                    </td>
-                                    <td>
-                                        GALITE CAMP 2.0
-                                    </td>
-                                    <td >
-                                        Randotour vous emmènes vivre cette expérience ...
-                                    </td>
-
-
-                                    <td>
-                                        Partenariat Commercial
-                                    </td>
-                                    <td class="text-primary">
-                                        $3600,738
-                                    </td>
-                                    <td >
-                                        <button type="button" class="btn btn-outline-info btn-sm" (click)="redirectToPartInfo()">S</button>
-                                        <button type="button" class="btn btn-outline-secondary btn-sm" (click)="redirectToUpPart()">U</button>
-
-                                        <button type="button" class="btn btn-outline-danger btn-sm">X</button>
-
-                                    </td>
-
                                 </tr>
                                 </tbody>
                             </table>

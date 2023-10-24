@@ -3,57 +3,101 @@
         <div class="filter"></div>
     </div>
 </div>
-
 <div class="container">
-    <div class="row justify-content-center"> <!-- Center the form -->
-        <div class="col-lg-4 col-sm-6">
-            <div class="card card-register">
-                <h3 class="title">Event Management</h3>
-                <form [formGroup]="eventForm" (ngSubmit)="onSubmit()">
-                    <!-- Event Title -->
-                    <div class="form-group">
-                        <label for="eventTitle">Event Title</label>
-                        <input type="text" class="form-control" id="eventTitle" placeholder="Enter event title" formControlName="eventTitle">
-                        <i class="fa fa-info-circle" title="Event title must be alphanumeric and less than 20 characters long"></i>
-                        <div *ngIf="eventForm.get('eventTitle').invalid && (eventForm.get('eventTitle').dirty || eventForm.get('eventTitle').touched)" class="text-light">
-                            Event title is required and must be alphanumeric, less than 20 characters.
-                        </div>
-                    </div>
+    <div class="card">
+        <div class="card-body">
+            <form [formGroup]="eventForm" (ngSubmit)="onSubmit()">
+                <!-- Event Title -->
+                <div class="form-group">
+                    <label for="title">Event Title</label>
+                    <input type="text" id="title" class="form-control" formControlName="title">
+                </div>
 
-                    <!-- Event Date -->
-                    <div class="form-group">
-                        <label for="eventTitle">Event Title</label>
-                        <input type="date" class="form-control" id="eventDate" formControlName="eventDate" [min]="minDate">
-                        <i class="fa fa-info-circle" title="Event date cannot be before the current date and must be at least one week ahead"></i>
-                        <div *ngIf="eventForm.get('eventDate').invalid && (eventForm.get('eventDate').dirty || eventForm.get('eventDate').touched)" class="text-light">
-                            Event date is required and must be at least one week ahead.
-                        </div>
-                    </div>
+                <!-- Event Date -->
+                <div class="form-group">
+                    <label for="date">Event Date</label>
+                    <input type="date" id="date" class="form-control" formControlName="date" [min]="minDate">
+                </div>
 
-                    <!-- Event Location -->
-                    <div class="form-group">
-                        <label for="eventLocation">Event Location</label>
-                        <input type="text" class="form-control" id="eventLocation" placeholder="Enter event location" formControlName="eventLocation">
-                        <i class="fa fa-info-circle" title="Event location must be alphanumeric"></i>
-                        <div *ngIf="eventForm.get('eventLocation').invalid && (eventForm.get('eventLocation').dirty || eventForm.get('eventLocation').touched)" class="text-light">
-                            Event location is required and must be alphanumeric.
-                        </div>
-                    </div>
+                <!-- Event Location -->
+                <div class="form-group">
+                    <label for="location">Event Location</label>
+                    <input type="text" id="location" class="form-control" formControlName="location">
+                </div>
 
-                    <!-- Event Description -->
-                    <div class="form-group">
-                        <label for="eventDescription">Event Description</label>
-                        <textarea class="form-control" id="eventDescription" rows="4" placeholder="Enter event description" formControlName="eventDescription"></textarea>
-                        <i class="fa fa-info-circle" title="Event description must be alphanumeric"></i>
-                        <div *ngIf="eventForm.get('eventDescription').invalid && (eventForm.get('eventDescription').dirty || eventForm.get('eventDescription').touched)" class="text-light">
-                            Event description is required and must be alphanumeric.
-                        </div>
-                    </div>
+                <!-- Event Description -->
+                <div class="form-group">
+                    <label for="description">Event Description</label>
+                    <textarea id="description" class="form-control" formControlName="description" rows="4"></textarea>
+                </div>
 
-                    <!-- Submit Button -->
-                    <button type="submit" class="btn btn-primary" [disabled]="eventForm.invalid">Create Event</button>
-                </form>
-            </div>
+                <!-- Submit Button -->
+                <div class="text-center">
+                    <button type="submit" class="btn btn-primary">Create Event</button>
+                </div>
+            </form>
         </div>
     </div>
 </div>
+
+<!-- Display Created Events -->
+<div class="container mt-3">
+    <h3>Created Events</h3>
+    <ul>
+        <li *ngFor="let event of events">
+            <p>{{ event.title }}</p>
+            <p>Date: {{ event.date | date }}</p>
+            <p>Location: {{ event.location }}</p>
+            <p>Description: {{ event.description }}</p>
+            <button class="btn btn-primary" (click)="openUpdateEventDialog(content, event)">Update</button>
+            <button class="btn btn-danger" (click)="deleteEvent(event.id)">Delete</button>
+        </li>
+    </ul>
+</div>
+
+<!-- Modal Dialog for Updating Event -->
+<ng-template #content let-modal>
+    <div class="modal-header">
+        <h4 class="modal-title" id="modal-basic-title">Update Event</h4>
+        <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+    <div class="modal-body">
+        <form [formGroup]="eventForm" (ngSubmit)="updateEvent(eventForm.value)">
+            <!-- Event Title -->
+            <div class="form-group">
+                <label for="title">Event Title</label>
+                <input type="text" id="title" class="form-control" formControlName="title">
+            </div>
+
+            <!-- Event Date -->
+            <div class="form-group">
+                <label for="date">Event Date</label>
+                <input type="date" id="date" class="form-control" formControlName="date" [min]="minDate">
+            </div>
+
+            <!-- Event Location -->
+            <div class="form-group">
+                <label for="location">Event Location</label>
+                <input type="text" id="location" class="form-control" formControlName="location">
+            </div>
+
+            <!-- Event Description -->
+            <div class="form-group">
+                <label for="description">Event Description</label>
+                <textarea id="description" class="form-control" formControlName="description" rows="4"></textarea>
+            </div>
+
+            <!-- Submit Button -->
+            <div class="text-center">
+                <button type="submit" class="btn btn-primary">Update Event</button>
+            </div>
+        </form>
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" (click)="modal.close('Close click')">Close</button>
+    </div>
+</ng-template>
+
+

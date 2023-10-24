@@ -16,11 +16,11 @@ import {MatInputModule} from '@angular/material/input';
 import {MatSelectModule} from '@angular/material/select';
 import { EventmanagementComponent } from './eventmanagement/eventmanagement.component';
 import { EventManagementComponent } from './event-management/event-management.component';
+import {NgbModule} from "@ng-bootstrap/ng-bootstrap";
 
 @NgModule({
     imports: [
         BrowserAnimationsModule,
-        FormsModule,
         ReactiveFormsModule,
         HttpClientModule,
         ComponentsModule,
@@ -30,6 +30,8 @@ import { EventManagementComponent } from './event-management/event-management.co
         MatFormFieldModule,
         MatInputModule,
         MatSelectModule,
+        FormsModule,
+        NgbModule,
     ],
   declarations: [
     AppComponent,

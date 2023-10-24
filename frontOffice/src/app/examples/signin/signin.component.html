@@ -18,28 +18,26 @@
                                 <i class="fa fa-twitter"></i>
                             </a>
                         </div>
-                        <form class="register-form">
-                            <label>Email</label>
+                        <form [formGroup]="loginForm" (ngSubmit)="onSubmit()" class="register-form">
+                            <label  for="nickName" >User </label>
                             <div class="input-group form-group-no-border" [ngClass]="{'input-group-focus':focus===true}">
                                 <div class="input-group-prepend">
                                   <span class="input-group-text">
-                                      <i class="nc-icon nc-email-85"></i>
+                                      <i class="nc-icon nickName"></i>
                                   </span>
                                 </div>
-
-                                <input type="text" class="form-control" placeholder="Email" (focus)="focus=true" (blur)="focus=false" >
+                                <input type="nickName" class="form-control" id="nickName" formControlName="nickName" placeholder="User" (focus)="focus=true" (blur)="focus=false" >
                             </div>
-
-                            <label>Password</label>
+                            <label for="password">Password</label>
                             <div class="input-group form-group-no-border" [ngClass]="{'input-group-focus':focus1===true}">
                                 <div class="input-group-prepend">
                                   <span class="input-group-text">
                                       <i class="nc-icon nc-key-25"></i>
                                   </span>
                                 </div>
-                                <input type="text" class="form-control" placeholder="Password" (focus)="focus1=true" (blur)="focus1=false" >
+                                <input type="password" class="form-control" id="password" formControlName="password" (focus)="focus1=true" (blur)="focus1=false" >
                             </div>
-                            <button class="btn btn-danger btn-block btn-round">Se connecter</button>
+                            <button type="submit" class="btn btn-danger btn-block btn-round" [disabled]="loginForm.invalid">Se connecter</button>
                         </form>
                         <div class="forgot">
                             <a href="#" class="btn btn-link" style="color: #007186;">Forgot password?</a>
@@ -53,3 +51,30 @@
         </div>
     </div>
 </div>
+
+<!--<div-->
+<!--        class="authentication-card-container">-->
+<!--    <mat-card class="authentication-card">-->
+<!--        <mat-card-header> <mat-card-title>Login</mat-card-title></mat-card-header>-->
+<!--        <mat-card-content>-->
+<!--            <form [formGroup]="loginForm">-->
+<!--                <mat-form-field>-->
+<!--                    <mat-label>Username</mat-label>-->
+<!--                    <input matInput formControlName="nickName" />-->
+<!--                </mat-form-field>-->
+<!--                <mat-form-field>-->
+<!--                    <mat-label>Password</mat-label>-->
+<!--                    <input matInput type="password" formControlName="password" />-->
+<!--                </mat-form-field>-->
+<!--            </form>-->
+<!--        </mat-card-content>-->
+<!--        <mat-card-actions>-->
+<!--            <button mat-raised-button color="primary" (click)="onSubmit()">-->
+<!--                Login-->
+<!--            </button>-->
+<!--            <button mat-button routerLink="/register" routerLinkActive="active">-->
+<!--                Don't have an account? Register here.-->
+<!--            </button>-->
+<!--        </mat-card-actions>-->
+<!--    </mat-card>-->
+<!--</div>-->

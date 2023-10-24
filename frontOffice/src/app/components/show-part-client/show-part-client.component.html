@@ -40,30 +40,40 @@
                 </tr>
                 </thead>
                 <tbody>
-                <tr>
-                    <th scope="row">1</th>
-                    <td><p><a href="" class="link-primary link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover">GALITE CAMP 2.0</a></p>
-                    </td>
-                    <td>Randotour vous emmènes vivre cette expérience ...</td>
-                    <td>Partenariat Commercial</td>
-                    <td>$3600,738</td>
-                </tr>
-                <tr>
-                    <th scope="row">2</th>
-                    <td><p><a href="" class="link-primary link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover">Jacob</a></p></td>
-                    <td>Randotour vous emmènes vivre cette expérience ...</td>
-                    <td>Partenariat Commercial</td>
-                    <td>$3600,738</td>
-                </tr>
-                <tr>
-                    <th scope="row">3</th>
-                    <td><p><a href="" class="link-primary link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover">Larry</a></p></td>
-                    <td>Randotour vous emmènes vivre cette expérience ...</td>
-                    <td>Partenariat Commercial</td>
-                    <td>$3600,738</td>
+                <tr *ngFor="let part of parts">
+                    <th scope="row">{{ part.id }}</th>
+                    <td><p><a href="" class="link-primary link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover">{{ part.idEvenement }}</a></p></td>
+                    <td>{{ part.description }}</td>
+                    <td>{{ part.typePartenariat }}</td>
+                    <td>${{ part.budget }}</td>
                 </tr>
                 </tbody>
             </table>
+            <!--                <tbody>-->
+<!--                <tr>-->
+<!--                    <th scope="row">1</th>-->
+<!--                    <td><p><a href="" class="link-primary link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover">GALITE CAMP 2.0</a></p>-->
+<!--                    </td>-->
+<!--                    <td>Randotour vous emmènes vivre cette expérience ...</td>-->
+<!--                    <td>Partenariat Commercial</td>-->
+<!--                    <td>$3600,738</td>-->
+<!--                </tr>-->
+<!--                <tr>-->
+<!--                    <th scope="row">2</th>-->
+<!--                    <td><p><a href="" class="link-primary link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover">Jacob</a></p></td>-->
+<!--                    <td>Randotour vous emmènes vivre cette expérience ...</td>-->
+<!--                    <td>Partenariat Commercial</td>-->
+<!--                    <td>$3600,738</td>-->
+<!--                </tr>-->
+<!--                <tr>-->
+<!--                    <th scope="row">3</th>-->
+<!--                    <td><p><a href="" class="link-primary link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover">Larry</a></p></td>-->
+<!--                    <td>Randotour vous emmènes vivre cette expérience ...</td>-->
+<!--                    <td>Partenariat Commercial</td>-->
+<!--                    <td>$3600,738</td>-->
+<!--                </tr>-->
+<!--                </tbody>-->
+<!--            </table>-->
         </div>
         </div>
 

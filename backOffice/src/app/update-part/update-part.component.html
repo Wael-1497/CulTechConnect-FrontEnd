@@ -5,44 +5,42 @@
     <div class="container-fluid">
         <div class="row">
             <div class="col-md-8">
-                <div class="card" style="width: 370%; height: 500px;">
+                <div class="card"   style="width: 370%; height: 500px;">
                     <div class="card-header card-header-info">
                         <h4 class="card-title">Modifier Partenariats</h4>
                         <p class="card-category">Enjoy ur update</p>
                     </div>
-                    <div class="card-body">
-                        <form>
+                    <div class="card-body" *ngIf="part">
+                        <form (ngSubmit)="updatePart()">
                             <div class="row">
                                 <div class="col-md-6">
-                                    <mat-form-field class="example-full-width">
-                                        <input matInput placeholder="Nom de l'organisation" type="text">
+                                    <mat-form-field class="example-full-width" >
+                                        <input id="nomOrganisation"  [(ngModel)]="part.nomOrganisation" value="{{part.nomOrganisation}}" matInput placeholder="Nom de l'organisation" type="text">
                                     </mat-form-field>
+
                                 </div>
                             </div>
                             <div class="row">
                                 <div class="col-md-12">
                                     <mat-form-field class="example-full-width">
-                                        <input matInput placeholder="Adress" type="text">
+                                        <input id="adresse" [(ngModel)]="part.adresse"   value="{{part.adresse}}" matInput placeholder="Adress" type="text">
                                     </mat-form-field>
                                 </div>
                             </div>
                             <div class="row">
                                 <div class="col-md-6">
-                                    <mat-form-field>
-                                        <mat-label>Choose your event</mat-label>
-                                        <mat-select>
-                                            <mat-option value="option">GALITE CAMP 2.0</mat-option>
-                                            <mat-option value="option">Event 2</mat-option>
-                                            <mat-option value="option">Event 3</mat-option>
+                                    <mat-form-field >
+                                        <mat-label>{{part.idEvenement}} </mat-label>
+                                        <mat-select [disabled]="true" value="{{part.idEvenement}}">
                                         </mat-select>
-                                        <mat-hint align="end">Here's the dropdown arrow ^</mat-hint>
+                                        <mat-hint align="end">Here's the Event ID ^</mat-hint>
                                     </mat-form-field>
                                 </div>
                             </div>
                             <div class="row">
                                 <div class="col-md-12">
                                     <mat-form-field class="example-full-width">
-                                        <textarea matInput placeholder="Description"></textarea>
+                                        <textarea id="description" [(ngModel)]="part.description" matInput placeholder="Description"></textarea>
                                     </mat-form-field>
                                     <!-- <div class="form-group">
 
@@ -56,11 +54,12 @@
                             <div class="row">
                                 <div class="col-md-6">
                                     <mat-form-field>
-                                        <mat-label>Type de partenariat</mat-label>
-                                        <mat-select>
-                                            <mat-option value="option">Partenariat Commercial</mat-option>
-                                            <mat-option value="option">Type 2</mat-option>
-                                            <mat-option value="option">Type 3</mat-option>
+                                        <mat-label>{{part.typePartenariat}}</mat-label>
+                                        <mat-select [(ngModel)]="part.typePartenariat">
+                                            <mat-option value="Partenariat Commercial">Partenariat Commercial</mat-option>
+                                            <mat-option value="Partenariat Stratégique">Partenariat Stratégique</mat-option>
+                                            <mat-option value="Partenariat Public-Privé (PPP)">Partenariat Public-Privé (PPP)</mat-option>
+                                            <mat-option value="Partenariat De Distribution">Partenariat De Distribution</mat-option>
                                         </mat-select>
                                         <mat-hint align="end">Here's the dropdown arrow ^</mat-hint>
                                     </mat-form-field>
@@ -68,8 +67,8 @@
                             </div>
                             <div class="row">
                                 <div class="col-md-6">
-                                    <mat-form-field class="example-full-width">
-                                        <input matInput placeholder="Budget" type="text">
+                                    <mat-form-field class="example-full-width" >
+                                       <input id="budget" [(ngModel)]="part.budget"  value="{{part.budget}}" matInput placeholder="Budget" type="text">
 
                                     </mat-form-field>
                                 </div>
@@ -77,7 +76,7 @@
 
 
 
-                            <button mat-raised-button type="submit" class="btn btn-info pull-center">Modifier</button>
+                            <button mat-raised-button type="submit" class="btn btn-info pull-center">Update</button>
                             <div class="clearfix"></div>
                         </form>
                     </div>
