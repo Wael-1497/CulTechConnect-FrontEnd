@@ -1,0 +1,23 @@
+.authentication-card {
+  width: 30%;
+  margin: 0 auto;
+}
+
+.authentication-card-container {
+  min-height: 100vh;
+}
+
+/*.custom-blue-card {*/
+/*  background-color: #00A4B9; !* Change this to your desired blue color *!*/
+/*}*/
+/*.btn-danger {*/
+/*  background-color: #007186; !* Desired dark blue color *!*/
+/*  border-color: #007186; !* Desired dark blue color *!*/
+/*  color: white; !* Text color, adjust as needed for contrast *!*/
+/*}*/
+
+/*.btn-danger:hover {*/
+/*  background-color: #008A9F; !* Darker shade on hover, adjust as needed *!*/
+/*  border-color: #008A9F; !* Darker shade on hover, adjust as needed *!*/
+/*  color: white; !* Text color on hover, adjust as needed for contrast *!*/
+/*}*/

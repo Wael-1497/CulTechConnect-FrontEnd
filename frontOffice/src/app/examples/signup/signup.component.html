@@ -18,41 +18,31 @@
                                 <i class="fa fa-twitter"></i>
                             </a>
                         </div>
-                        <form class="register-form">
+                        <form [formGroup]="registerForm" (ngSubmit)="onSubmit()" class="register-form">
                             <div class="row">
                                 <div class="col">
-                                    <label>First Name</label>
+                                    <label>Nickname</label>
                                     <div class="input-group form-group-no-border" [ngClass]="{'input-group-focus':focus===true}">
                                         <div class="input-group-prepend">
                       <span class="input-group-text">
                         <i class="nc-icon nc-single-02"></i>
                       </span>
                                         </div>
-                                        <input type="text" class="form-control" placeholder="First Name" (focus)="focus=true" (blur)="focus=false">
+                                        <input type="text" class="form-control" placeholder="Nickname" (focus)="focus=true" (blur)="focus=false">
                                     </div>
                                 </div>
-                                <div class="col">
-                                    <label>Last Name</label>
-                                    <div class="input-group form-group-no-border" [ngClass]="{'input-group-focus':focus===true}">
-                                        <div class="input-group-prepend">
-                      <span class="input-group-text">
-                        <i class="nc-icon nc-single-02"></i>
-                      </span>
-                                        </div>
-                                        <input type="text" class="form-control" placeholder="Last Name" (focus)="focus=true" (blur)="focus=false">
-                                    </div>
-                                </div>
+
                             </div>
 
-                            <label>Email</label>
-                            <div class="input-group form-group-no-border" [ngClass]="{'input-group-focus':focus===true}">
-                                <div class="input-group-prepend">
-                  <span class="input-group-text">
-                    <i class="nc-icon nc-email-85"></i>
-                  </span>
-                                </div>
-                                <input type="text" class="form-control" placeholder="Email" (focus)="focus=true" (blur)="focus=false">
-                            </div>
+<!--                            <label>Email</label>-->
+<!--                            <div class="input-group form-group-no-border" [ngClass]="{'input-group-focus':focus===true}">-->
+<!--                                <div class="input-group-prepend">-->
+<!--                  <span class="input-group-text">-->
+<!--                    <i class="nc-icon nc-email-85"></i>-->
+<!--                  </span>-->
+<!--                                </div>-->
+<!--                                <input type="text" class="form-control" placeholder="Email" (focus)="focus=true" (blur)="focus=false">-->
+<!--                            </div>-->
 
                             <div class="row">
                                 <div class="col">
@@ -79,11 +69,11 @@
                                 </div>
                             </div>
 
-                            <label>Type of Account</label>
-                            <select class="form-control">
-                                <option value="option2">Simple User</option>
-                                <option value="option1">Company</option>
-                            </select>
+<!--                            <label>Type of Account</label>-->
+<!--                            <select class="form-control">-->
+<!--                                <option value="option2">Simple User</option>-->
+<!--                                <option value="option1">Company</option>-->
+<!--                            </select>-->
 
                             <div class="centered-container">
                             <button class="btn btn-danger btn-block btn-round">Register</button>
@@ -98,3 +88,34 @@
         </div>
     </div>
 </div>
+<!--<div class="authentication-card-container">-->
+<!--    <mat-card class="authentication-card">-->
+<!--        <mat-card-header>-->
+<!--            <mat-card-title>Register</mat-card-title></mat-card-header-->
+<!--        >-->
+<!--        <mat-card-content>-->
+<!--            <form [formGroup]="registerForm">-->
+<!--                <mat-form-field>-->
+<!--                    <mat-label>Nickname</mat-label>-->
+<!--                    <input matInput formControlName="nickName" />-->
+<!--                </mat-form-field>-->
+<!--                <mat-form-field>-->
+<!--                    <mat-label>Password</mat-label>-->
+<!--                    <input matInput type="password" formControlName="password" />-->
+<!--                </mat-form-field>-->
+<!--                <mat-form-field>-->
+<!--                    <mat-label>Confirm password</mat-label>-->
+<!--                    <input matInput type="password" formControlName="confirmPassword" />-->
+<!--                </mat-form-field>-->
+<!--            </form>-->
+<!--        </mat-card-content>-->
+<!--        <mat-card-actions>-->
+<!--            <button mat-raised-button color="primary" (click)="onSubmit()">-->
+<!--                Register-->
+<!--            </button>-->
+<!--            <button mat-button routerLink="/login" routerLinkActive="active">-->
+<!--                Already have an account? Login here.-->
+<!--            </button>-->
+<!--        </mat-card-actions>-->
+<!--    </mat-card>-->
+<!--</div>-->

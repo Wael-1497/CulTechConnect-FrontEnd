@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { Events } from '../models/Events';
+import { Events } from '../_models/Events';
 import {ModalDismissReasons, NgbModal} from "@ng-bootstrap/ng-bootstrap";
-import { EventmanagementService } from  '../services/eventmanagement.service';
+import { EventmanagementService } from '../_services/eventmanagement.service';
 @Component({
   selector: 'app-eventmanagement',
   templateUrl: './eventmanagement.component.html',

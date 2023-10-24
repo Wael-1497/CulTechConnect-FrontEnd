@@ -1,13 +1,13 @@
 import {Component, OnInit, Renderer2} from '@angular/core';
 import {ModalDismissReasons, NgbDateStruct, NgbModal} from "@ng-bootstrap/ng-bootstrap";
-import {Partnership} from "../models/partnership";
-import {PartershipService} from "../services/partership.service";
+import {Partnership} from "../_models/partnership";
+import {PartershipService} from "../_services/partership.service";
 import {ActivatedRoute, Router} from "@angular/router";
 import {environment} from "../../../environments/environment";
 import { loadStripe } from '@stripe/stripe-js';
 import {HttpClient} from "@angular/common/http";
-import { Events } from '../models/Events';
-import { EventmanagementService } from '../services/eventmanagement.service';
+import { Events } from '../_models/Events';
+import { EventmanagementService } from '../_services/eventmanagement.service';
 
 @Component({
   selector: 'app-event',

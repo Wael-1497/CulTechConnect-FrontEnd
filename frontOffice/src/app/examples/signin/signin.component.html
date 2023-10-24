@@ -18,18 +18,16 @@
                                 <i class="fa fa-twitter"></i>
                             </a>
                         </div>
-                        <form [formGroup]="loginForm" (ngSubmit)="submitForm()" class="register-form">
-                            <label  for="email" >User </label>
+                        <form [formGroup]="loginForm" (ngSubmit)="onSubmit()" class="register-form">
+                            <label  for="nickName" >User </label>
                             <div class="input-group form-group-no-border" [ngClass]="{'input-group-focus':focus===true}">
                                 <div class="input-group-prepend">
                                   <span class="input-group-text">
-                                      <i class="nc-icon nc-email-85"></i>
+                                      <i class="nc-icon nickName"></i>
                                   </span>
                                 </div>
-
-                                <input type="email" class="form-control" id="email" formControlName="email" placeholder="User" (focus)="focus=true" (blur)="focus=false" >
+                                <input type="nickName" class="form-control" id="nickName" formControlName="nickName" placeholder="User" (focus)="focus=true" (blur)="focus=false" >
                             </div>
-
                             <label for="password">Password</label>
                             <div class="input-group form-group-no-border" [ngClass]="{'input-group-focus':focus1===true}">
                                 <div class="input-group-prepend">
@@ -53,3 +51,30 @@
         </div>
     </div>
 </div>
+
+<!--<div-->
+<!--        class="authentication-card-container">-->
+<!--    <mat-card class="authentication-card">-->
+<!--        <mat-card-header> <mat-card-title>Login</mat-card-title></mat-card-header>-->
+<!--        <mat-card-content>-->
+<!--            <form [formGroup]="loginForm">-->
+<!--                <mat-form-field>-->
+<!--                    <mat-label>Username</mat-label>-->
+<!--                    <input matInput formControlName="nickName" />-->
+<!--                </mat-form-field>-->
+<!--                <mat-form-field>-->
+<!--                    <mat-label>Password</mat-label>-->
+<!--                    <input matInput type="password" formControlName="password" />-->
+<!--                </mat-form-field>-->
+<!--            </form>-->
+<!--        </mat-card-content>-->
+<!--        <mat-card-actions>-->
+<!--            <button mat-raised-button color="primary" (click)="onSubmit()">-->
+<!--                Login-->
+<!--            </button>-->
+<!--            <button mat-button routerLink="/register" routerLinkActive="active">-->
+<!--                Don't have an account? Register here.-->
+<!--            </button>-->
+<!--        </mat-card-actions>-->
+<!--    </mat-card>-->
+<!--</div>-->
