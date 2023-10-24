@@ -40,11 +40,17 @@
                 <li class="nav-item" *ngIf="!isDocumentation()">
                     <a [routerLink]="['/event']" class="nav-link"><i class="nc-icon nc-book-bookmark"></i>Event</a>
                 </li>
+                <li class="nav-item" *ngIf="!isDocumentation()">
+                    <a [routerLink]="['/bot']" class="nav-link"><i class="nc-icon nc-book-bookmark"></i>ChatBot</a>
+                </li>
+                <li class="nav-item" *ngIf="!isDocumentation()">
+                    <a [routerLink]="['/demo']" class="nav-link"><i class="nc-icon nc-book-bookmark"></i>ChatGpt</a>
+                </li>
 <!--                <li class="nav-item" *ngIf="!isDocumentation()">-->
 <!--                    <a [routerLink]="['/eventmanagement']" class="nav-link"><i class="nc-icon nc-book-bookmark"></i>Event Management</a>-->
 <!--                </li>-->
                 <li class="nav-item" *ngIf="!isDocumentation()">
-                    <a [routerLink]="['/chat']" class="nav-link"><i class="nc-icon nc-book-bookmark"></i>chat</a>
+                    <a [routerLink]="['/chats']" class="nav-link"><i class="nc-icon nc-book-bookmark"></i>chat</a>
                 </li>
                 <li class="nav-item" *ngIf="!isDocumentation()">
                     <a [routerLink]="['/blog']" class="nav-link"><i class="nc-icon nc-book-bookmark"></i>blog</a>
@@ -55,22 +61,11 @@
                 <li class="nav-item" *ngIf="!isDocumentation()">
                     <a [routerLink]="['/signup']" class="nav-link"><i class="nc-icon nc-book-bookmark"></i>Sign-Up</a>
                 </li>
-                <li ngbDropdown class="nav-item">
-                    <a class="nav-link" id="dropdownBasic1" ngbDropdownToggle><i class="nc-icon nc-book-bookmark"></i>Dropdown Test</a>
-                    <div ngbDropdownMenu aria-labelledby="dropdownBasic1" class="dropdown-primary">
-                        <a [routerLink]="['/test']" class="dropdown-item">Action - 1</a>
-                        <a [routerLink]="['/home']" class="dropdown-item">Another Action</a>
-                        <a class="dropdown-item">Something else is here</a>
-                    </div>
-                </li>
-                <li class="nav-item" *ngIf="!isDocumentation()">
-                    <a [routerLink]="['/test']" class="nav-link"><i class="nc-icon nc-bookmark-2"></i> Test 2</a>
-                </li>
-<!--                <li class="nav-item" *ngIf="isHome()">-->
+
+<!--               ass="nav-item" *ngIf="isHome()">&ndash;&gt;-->
 <!--                    <a href="https://www.creative-tim.com/product/paper-kit-2-pro-angular?ref=pk2-angular-free-local" target="_blank" class="btn btn-danger btn-round">Upgrade to Pro</a>-->
 <!--                </li>-->
                 <li class="nav-item" *ngIf="!isDocumentation()">
-                    <a [routerLink]="['/home']" *ngIf="!isDocumentation()" class="nav-link"><i class="nc-icon nc-layout-11"></i>Components</a>
                     <a [routerLink]="['/home']" *ngIf="isDocumentation()" class="nav-link">Back to Kit</a>
                 </li>
                 <li class="nav-item" *ngIf="isDocumentation()">

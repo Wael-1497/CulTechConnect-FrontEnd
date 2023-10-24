@@ -23,7 +23,7 @@ import {ChatHolderComponent} from "./components/chat-holder/chat-holder.componen
 import {AuthGuard} from "./components/_auth/auth.guard";
 
 const routes: Routes =[
-    { path: '', redirectTo: 'home', pathMatch: 'full' },
+    { path: '', redirectTo: 'signin', pathMatch: 'full' },
     { path: 'home',             component: ComponentsComponent },
     { path: 'user-profile',     component: ProfileComponent },
     { path: 'landing',          component: LandingComponent },
