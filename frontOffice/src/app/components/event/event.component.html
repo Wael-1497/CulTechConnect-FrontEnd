@@ -1,49 +1,47 @@
 <div class="wrapper">
-    <div class="page-header-xs" style="background-image: url('./assets/img/login-image.jpg'); background-size: 100% 100%; height: 80px;">
+    <div class="page-header section-dark page-header-xs" style="background-image: url('./assets/img/fabio-mangione.jpg'); background-size: cover; height: 10vh;">
         <div class="filter"></div>
-    </div>
-</div>
-<div class="page-header section-dark page-header-xs" style="background-image: url('./assets/img/blog-background.jpg'); background-size: cover; height: 10vh;">
-    <div class="filter"></div>
-    <div class="content-center">
-        <div class="container">
-            <div class="title-brand">
-                <h1 class="presentation-title" style="font-size: 55px;">Events</h1>
-                <div class="fog-low">
-                    <img src="./assets/img/fog-low.png" alt="">
+        <div class="content-center">
+            <div class="container">
+                <div class="title-brand">
+                    <h1 class="presentation-title" style="font-size: 55px;">CulTechConnect</h1>
+                    <div class="fog-low">
+                        <img src="../../../assets/img/fog-low.png" alt="">
+                    </div>
+                    <div class="fog-low right">
+                        <img src="../../../assets/img/fog-low.png" alt="">
+                    </div>
                 </div>
-                <div class="fog-low right">
-                    <img src="./assets/img/fog-low.png" alt="">
-                </div>
-            </div>
-            <h2 class="presentation-subtitle text-center">Découvrez nos évenement</h2>
-        </div>
-    </div>
-    <div class="moving-clouds" style="background-image: url('./assets/img/clouds.png'); "></div>
-    <h6 class=" category-absolute ml-auto mr-auto">Conçu et codé par Vous</h6>
-</div>
 
-<div class="container">
+                <h2 class="presentation-subtitle text-center">Découvrez nos évenements</h2>
+            </div>
+        </div>
+        <div class="moving-clouds" style="background-image: url('assets/img/clouds.png'); "></div>
+        <h6 class=" category-absolute ml-auto mr-auto">Designed and coded by ENA
+            <!-- <h6 class="category category-absolute">Designed and coded by -->
+
+        </h6>
+    </div>
+
+
+    <div class="container">
     <div class="row">
         <div class="col-lg-4 col-sm-6" *ngFor="let event of events">
-            <div class="card card-register">
-                <h3 class="title">Events</h3>
-                    <!-- Event Card 1 -->
-                    <div class="event-card">
-
-                        <h4>{{ event.title }}</h4>
-                        <p>{{ event.description }}</p>
-                        <div class="container d-flex justify-content-center align-items-center">
-                            <button type="button" class="btn btn-secondary" (click)="open(content)">Checkout</button>
-                            <button class="btn btn-success" (click)="toggleEventDetails(event.id)">Details</button>
-                            <div class="event-details" *ngIf="event.id === activeEventId">
-                                <p>Date: {{ event.date | date }}</p>
-                                <p>Location: {{ event.location }}</p>
-                                <p>Description: {{ event.description }}</p>
-                            </div>
-                            <button class="btn btn-primary">Participate</button>
-                        </div>
-
+            <div class="card card-register custom-card"> <!-- Ajoutez la classe personnalisée ici -->
+                <h3 class="title white-text">Events</h3>
+                <!-- Event Card 1 -->
+                <div class="event-card">
+                    <h4>{{ event.title }}</h4>
+                    <div class="container d-flex justify-content-center align-items-center">
+                        <button type="button" class="btn btn-success" (click)="toggleEventDetails(event.id)">Details</button>
+                        <button type="button" class="btn btn-outline-dark">Participate</button>
+                    </div>
+                    <div class="event-details" *ngIf="event.id === activeEventId">
+                        <p>Date: {{ event.date | date }}</p>
+                        <p>Location: {{ event.location }}</p>
+                        <p>Description: {{ event.description }}</p>
+                        <button type="button" class="btn btn-secondary" (click)="open(content)">Checkout</button>
+                    </div>
                         <!--Checkout Button -->
 <!--                        <div class="container d-flex justify-content-center align-items-center">-->
 <!--                            <button type="button" class="btn btn-outline-info btn-round" (click)="open(content)">Checkout</button>-->
@@ -119,4 +117,5 @@
     <div class="footer register-footer text-center">
         <h6>&copy;{{ currentYear }}, made with <i class="fa fa-heart heart"></i> by Creative Tim</h6>
     </div>
+</div>
 </div>

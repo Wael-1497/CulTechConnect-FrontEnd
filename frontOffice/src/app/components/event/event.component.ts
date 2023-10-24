@@ -19,13 +19,15 @@ export class EventComponent {
 
   partnership: Partnership = new Partnership();
   submitted = false;
-  id: any;
+  id: 1;
   stripePromise = loadStripe(environment.stripe);
   isBudgetNumeric: boolean = true;
   closeResult: string;
   activeEventId: number | null = null;
   events: Events[] = [];
   currentYear: number = new Date().getFullYear();
+  valeurInitiale: any = 12; // Remplacez "La valeur initiale souhaitée" par la valeur réelle que vous souhaitez affecter.
+
 
   // END
 
